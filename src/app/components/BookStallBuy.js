@@ -1,6 +1,8 @@
 import React from 'react'
 
-const BookStallBuy = () => {
+const BookStallBuy = (props) => {
+  console.log(props)
+  
   return (
     <div className="mt-10 px-32 shadow-xl ml-32 bg-[#FAFAF9] rounded-lg ">
             <h1 className="text-[1.4rem] py-7 ">Stall Booking Details</h1>
@@ -8,11 +10,11 @@ const BookStallBuy = () => {
             <div className="flex items-center justify-between mt-5">
               <p className="flex items-center justify-between gap-2">
                 <span className="font-semibold">Stall Number</span>
-                <span>300</span>
+                <span>{props.selectedStallNumber}</span>
               </p>
               <p className="flex items-center justify-between gap-2">
                 <span className="font-semibold">Stall Price</span>
-                <span>300</span>
+                <span>{props.selectedPrice}</span>
               </p>
               <p className="flex items-center justify-between gap-2">
                 <span className="font-semibold">Grand Total</span>
