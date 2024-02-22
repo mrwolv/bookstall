@@ -1,12 +1,15 @@
+import Image from "next/image";
+import BookStallBuy from "./BookStallBuy";
+
 const BookStallModal = ({ open, setOpen }) => {
   return (
     <div className=" text-black shadow-xl ">
       {open && (
         <div
-          className="fixed  top-[10%] -translate-x-1/2 
-          h-full w-[90%] rounded-md bg-white shadow-xl px-5 border outline-dotted "
+          className="fixed top-[10%] -translate-x-1/2 overflow-y-auto
+        h-[90%] rounded-md bg-white shadow-xl px-5 border outline-dotted "
         >
-          <h1 className="font-semibold text-[1.4rem] flex items-center justify-center">
+          <h1 className="font-semibold text-[1.4rem]  flex items-center justify-center">
             Stall Layout
           </h1>
           <div className=" flex items-center justify-between mt-3 ">
@@ -526,6 +529,16 @@ const BookStallModal = ({ open, setOpen }) => {
               </table>
             </div>
           </div>
+          <div className="mt-5 px-36 flex items-center justify-between ">
+            <Image src={"/prices.webp"} alt="pRICES" height={200} width={400} />
+            <Image
+              src={"/prOcess.webp"}
+              alt="pRICES"
+              height={100}
+              width={150}
+            />
+          </div>
+          <BookStallBuy/>
         </div>
       )}
     </div>
