@@ -453,7 +453,7 @@ const BookStallModal = ({ open, setOpen }) => {
                   />
                   <td className="bg-[#79AE58]  premium "></td>
                   <SlotCell
-                    color="bg-[#D8E4BC]   "
+                    color="bg-[#64A2AC]   "
                     slotNum={58}
                     onClick={() =>
                       handleColorSelection("bg-[#64A2AC] ", "$30", 58)
@@ -463,57 +463,87 @@ const BookStallModal = ({ open, setOpen }) => {
                 {/* 8 row */}
 
                 <tr>
-                  <td className="premium bdr text-white bg-red-600 border-b border-black">
-                    <a href="#">11</a>
-                  </td>
-                  <td className="bg-[#64A2AC] premium border-b border-black">
-                    <a href="#">34</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">33</a>
-                  </td>
-                  <td className=" bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">32</a>
-                  </td>
-                  <td className=" bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">31</a>
-                  </td>
-                  <td className="bg-[#00FF01] premium border-b border-black">
-                    <a href="#">30</a>
-                  </td>
-                  <td className="bg-[#64A2AC] premium border-b border-black">
-                    <a href="#">29</a>
-                  </td>
-                  <td className="bg-red-600 text-white  premium  border-b border-black">
-                    <a href="#">28</a>
-                  </td>
+                  <SlotCell color="bg-red-600 " slotNum={11} />
+                  <SlotCell
+                    color="bg-[#64A2AC]   "
+                    slotNum={34}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC] ", "$30", 34)
+                    }
+                  />
+                  <SlotCell color="bg-red-600 " slotNum={33} />
+                  <SlotCell
+                    color="bg-[#D8E4BC]   "
+                    slotNum={32}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC] ", "$30", 32)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC]   "
+                    slotNum={31}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC] ", "$30", 31)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#00FF01] "
+                    slotNum={30}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC] ", "$30", 30)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC]   "
+                    slotNum={29}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC] ", "$30", 29)
+                    }
+                  />
+                  <SlotCell color="bg-red-600 " slotNum={28} />
                   <td className=""></td>{" "}
-                  <td className="bg-red-600 premium text-white border-b border-black ">
-                    <a href="#">70</a>
-                  </td>{" "}
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">71</a>
-                  </td>
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">72</a>
-                  </td>
-                  <td className="bg-[#D8E4BC]   premium border-b border-black">
-                    <a href="#">73</a>
-                  </td>
-                  <td className="bg-[#64A2AC]  premium border-b border-black">
-                    <a href="#">74</a>
-                  </td>
+                  <SlotCell color="bg-red-600 " slotNum={70} />
+                  <SlotCell
+                    color="bg-[#D8E4BC] "
+                    slotNum={71}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]", "$30", 71)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC] "
+                    slotNum={72}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC] ", "$30", 72)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC] "
+                    slotNum={73}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC] ", "$30", 73)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    slotNum={73}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]  ", "$30", 73)
+                    }
+                  />
                   <td className="bg-[#79AE58]  premium "></td>
-                  <td className="bg-[#D8E4BC]    premium border-b border-black">
-                    <a href="#">57</a>
-                  </td>
+                  <SlotCell
+                    color="bg-[#D8E4BC] "
+                    slotNum={57}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC] ", "$30", 57)
+                    }
+                  />
                 </tr>
 
                 {/* 9 r0w */}
                 <tr>
-                  <td className="premium bg-red-600 text-white  " rowSpan={2}>
-                    10
-                  </td>
+                  <SlotCell color="bg-red-600 " slotNum={10} rowSpan={2} />
                   <td className="  premium border-b border-black"></td>
                   <td className="  premium border-b border-black"></td>
                   <td className=" premium border-b border-black font-semibold">
@@ -532,98 +562,177 @@ const BookStallModal = ({ open, setOpen }) => {
                   <td className="bg-[#79AE58]    premium border-b border-black"></td>
                   <td className="bg-[#79AE58]  premium border-b border-black"></td>
                   <td className="bg-[#79AE58]  premium"></td>
-                  <td className=" bg-[#64A2AC]  premium" rowSpan={2}>
-                    <a href="#">59</a>
-                  </td>
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    rowSpan={2}
+                    slotNum={59}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]  ", "$30", 59)
+                    }
+                  />
                 </tr>
 
                 {/* 10 row */}
                 <tr>
-                  <td className=" bg-[#64A2AC]  premium border-b border-black">
-                    <a href="#">21</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">22</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">23</a>
-                  </td>
-                  <td className="bg-[#00FF01]  premium border-b border-black">
-                    <a href="#">24</a>
-                  </td>
-                  <td className="bg-red-600 premium border-b border-black">
-                    <a href="#">25</a>
-                  </td>
-                  <td className="bg-[#64A2AC] text-white  premium border-b border-black ">
-                    <a href="#">26</a>
-                  </td>
-                  <td className="bg-[#BE514B] text-white  premium border-b border-black ">
-                    <a href="#">27</a>
-                  </td>
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    slotNum={21}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]  ", "$30", 21)
+                    }
+                  />
+                  <SlotCell color="bg-red-600 " slotNum={22} />
+                  <SlotCell color="bg-red-600 " slotNum={23} />
+                  <SlotCell
+                    color="bg-[#00FF01] "
+                    slotNum={24}
+                    onClick={() =>
+                      handleColorSelection("bg-[#00FF01]  ", "$30", 24)
+                    }
+                  />
+                  <SlotCell color="bg-red-600 " slotNum={25} />
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    slotNum={26}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]  ", "$30", 26)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#BE514B] "
+                    slotNum={27}
+                    onClick={() =>
+                      handleColorSelection("bg-[#BE514B] ", "$30", 27)
+                    }
+                  />
                   <td className=""></td>{" "}
-                  <td className="bg-[#00FF01] premium text-white  border-b border-black">
-                    <a href="#">69</a>
-                  </td>{" "}
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">68</a>
-                  </td>
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">67</a>
-                  </td>
-                  <td className="bg-[#D8E4BC]   premium border-b border-black">
-                    <a href="#">66</a>
-                  </td>
-                  <td className="bg-[#64A2AC]  premium border-b border-black">
-                    <a href="#">65</a>
-                  </td>
+                  <SlotCell
+                    color="bg-[#00FF01] "
+                    slotNum={69}
+                    onClick={() =>
+                      handleColorSelection("bg-[#00FF01]  ", "$30", 69)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC]"
+                    slotNum={68}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]  ", "$30", 68)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC]"
+                    slotNum={67}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]  ", "$30", 67)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC]"
+                    slotNum={66}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]  ", "$30", 66)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    slotNum={65}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]   ", "$30", 65)
+                    }
+                  />
                   <td className="bg-[#79AE58]  premium"></td>
                 </tr>
                 {/* 10 row */}
                 <tr>
-                  <td className="premium bdr bg-red-600 border-b text-whie border-black">
-                    <a href="#">9</a>
-                  </td>
-                  <td className="bg-[#64A2AC] premium border-b border-black">
-                    <a href="#">20</a>
-                  </td>
-                  <td className=" bg-[#00FF01] premium border-b border-black">
-                    <a href="#">19</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">18</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">17</a>
-                  </td>
-                  <td className="bg-[#00FF01] premium border-b border-black">
-                    <a href="#">16</a>
-                  </td>
-                  <td className="bg-[#64A2AC] premium border-b border-black">
-                    <a href="#">15</a>
-                  </td>
-                  <td className="bg-[#BE514B] text-white  premium  border-b border-black">
-                    <a href="#">14</a>
-                  </td>
+                  <SlotCell color="bg-red-600 " slotNum={9} />
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    slotNum={20}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]   ", "$30", 20)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    slotNum={19}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]   ", "$30", 19)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC]"
+                    slotNum={18}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]  ", "$30", 18)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#BE514B]  "
+                    slotNum={17}
+                    onClick={() =>
+                      handleColorSelection("bg-[#BE514B]   ", "$30", 17)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    slotNum={16}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]   ", "$30", 16)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    slotNum={15}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]   ", "$30", 15)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    slotNum={14}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]   ", "$30", 14)
+                    }
+                  />
                   <td className=""></td>{" "}
-                  <td className="bg-red-600 premium text-white border-b border-black ">
-                    <a href="#">60</a>
-                  </td>{" "}
-                  <td className="bg-red-600 premium border-b border-black">
-                    <a href="#">61</a>
-                  </td>
-                  <td className="bg-red-600 premium border-b border-black">
-                    <a href="#">62</a>
-                  </td>
-                  <td className="bg-[#D8E4BC]   premium border-b border-black">
-                    <a href="#">63</a>
-                  </td>
-                  <td className="bg-[#00FF01]   premium border-b border-black">
-                    <a href="#">64</a>
-                  </td>
+                  <SlotCell color="bg-red-600 " slotNum={60} />
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    slotNum={61}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]   ", "$30", 61)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC] "
+                    slotNum={62}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]   ", "$30", 62)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC]  "
+                    slotNum={63}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]   ", "$30", 63)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC]  "
+                    slotNum={64}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]   ", "$30", 64)
+                    }
+                  />
                   <td className="bg-[#79AE58]  premium "></td>
-                  <td className="bg-[#D8E4BC]    premium border-b border-black">
-                    <a href="#">55</a>
-                  </td>
+                  <SlotCell
+                    color="bg-[#D8E4BC]  "
+                    slotNum={55}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]   ", "$30", 55)
+                    }
+                  />
                 </tr>
 
                 {/* 11 row */}
@@ -650,52 +759,102 @@ const BookStallModal = ({ open, setOpen }) => {
 
                 {/* 12 row */}
                 <tr>
-                  <td className="premium bdr bg-[#BE514B]" colSpan={2}>
-                    <a href="#" className="text-white">
-                      8
-                    </a>
-                  </td>
-                  <td className="bg-[#64A2AC]  premium border-b border-black">
-                    <a href="#">7</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">6</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">5</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">4</a>
-                  </td>
-                  <td className="bg-red-600  premium border-b border-black">
-                    <a href="#">3</a>
-                  </td>
-                  <td className="bg-red-600  premium border-b border-black">
-                    <a href="#">2</a>
-                  </td>
-                  <td className="bg-[#BE514B]  text-white  premium  border-b border-black">
-                    <a href="#">1</a>
-                  </td>
+                  <SlotCell
+                    color="bg-[#BE514B]  "
+                    slotNum={8}
+                    onClick={() =>
+                      handleColorSelection("bg-[#BE514B]", "$30", 8)
+                    }
+                    colSpan={2}
+                  />
+                  <SlotCell
+                    color="bg-[#BE514B]  "
+                    slotNum={7}
+                    onClick={() =>
+                      handleColorSelection("bg-[#BE514B]", "$30", 7)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC]   "
+                    slotNum={6}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]    ", "$30", 6)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC]   "
+                    slotNum={5}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]    ", "$30", 5)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC]  "
+                    slotNum={4}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]", "$30", 4)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC]"
+                    slotNum={3}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]", "$30", 3)
+                    }
+                  />
+                  <SlotCell color="bg-red-600 " slotNum={2} />
+                  <SlotCell
+                    color="bg-[#BE514B] "
+                    slotNum={1}
+                    onClick={() =>
+                      handleColorSelection("bg-[#BE514B] ", "$30", 1)
+                    }
+                  />
                   <td className=""></td>{" "}
-                  <td className="bg-red-600 premium text-white border-b border-black ">
-                    <a href="#">49</a>
-                  </td>{" "}
-                  <td className="bg-[#00FF01] premium border-b border-black">
-                    <a href="#">50</a>
-                  </td>
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">51</a>
-                  </td>
-                  <td className="bg-[#00FF01]   premium border-b border-black">
-                    <a href="#">52</a>
-                  </td>
-                  <td className="bg-[#64A2AC]  premium border-b border-black">
-                    <a href="#">53</a>
-                  </td>
+                  <SlotCell
+                    color="bg-[#BE514B] "
+                    slotNum={49}
+                    onClick={() =>
+                      handleColorSelection("bg-[#BE514B] ", "$30", 49)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC]"
+                    slotNum={50}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]", "$30", 50)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#D8E4BC]"
+                    slotNum={51}
+                    onClick={() =>
+                      handleColorSelection("bg-[#D8E4BC]", "$30", 51)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC]"
+                    slotNum={52}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]", "$30", 52)
+                    }
+                  />
+                  <SlotCell
+                    color="bg-[#64A2AC]"
+                    slotNum={53}
+                    onClick={() =>
+                      handleColorSelection("bg-[#64A2AC]", "$30", 53)
+                    }
+                  />
                   <td className="bg-[#BE514B]  premium "></td>
-                  <td className="bg-[#BE514B] text-white premium" colSpan={2}>
-                    <a href="#">54</a>
-                  </td>
+                  <SlotCell
+                    color="bg-[#BE514B]  "
+                    slotNum={54}
+                    onClick={() =>
+                      handleColorSelection("bg-[#BE514B]", "$30", 54)
+                    }
+                    colSpan={2}
+                  />
                 </tr>
               </table>
             </div>
