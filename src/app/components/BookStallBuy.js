@@ -7,15 +7,15 @@ const BookStallBuy = () => {
 
             <div className="flex items-center justify-between mt-5">
               <p className="flex items-center justify-between gap-2">
-                <span className="font-semibold">Stall number</span>
+                <span className="font-semibold">Stall Number</span>
                 <span>300</span>
               </p>
               <p className="flex items-center justify-between gap-2">
-                <span className="font-semibold">Stall number</span>
+                <span className="font-semibold">Stall Price</span>
                 <span>300</span>
               </p>
               <p className="flex items-center justify-between gap-2">
-                <span className="font-semibold">Stall number</span>
+                <span className="font-semibold">Grand Total</span>
                 <span>300</span>
               </p>
             </div>
@@ -32,43 +32,43 @@ const BookStallBuy = () => {
                   />
                 </div>
                 <div className="flex flex-col gap-4 justify-center">
-                  <span className="text-sm font-semibold">First Name</span>
+                  <span className="text-sm font-semibold">Email</span>
                   <input
-                    type="text"
-                    placeholder="Enter Name"
+                    type="email"
+                    placeholder="Enter Email"
                     required
                     className="form-control text-xs border border-gray-300 outline-gray-300 focus:outline-[#41cfd1] rounded-md py-1.5 px-2 font-semibold"
                   />
                 </div>
                 <div className="flex flex-col gap-4 justify-center">
-                  <span className="text-sm font-semibold">First Name</span>
+                  <span className="text-sm font-semibold">Phone Number</span>
                   <input
                     type="text"
-                    placeholder="Enter Name"
+                    placeholder="Enter phone number"
                     className="form-control text-xs border border-gray-300 outline-gray-300 focus:outline-[#41cfd1] rounded-md py-1.5 px-2 font-semibold"
                   />
                 </div>
                 <div className="flex flex-col gap-4 justify-center">
-                  <span className="text-sm font-semibold">First Name</span>
+                  <span className="text-sm font-semibold">Instagram address(**)</span>
                   <input
                     type="text"
-                    placeholder="Enter Name"
+                    placeholder="Instagram"
                     className="form-control text-xs border border-gray-300 outline-gray-300 focus:outline-[#41cfd1] rounded-md py-1.5 px-2 font-semibold"
                   />
                 </div>
                 <div className="flex flex-col gap-4 justify-center">
-                  <span className="text-sm font-semibold">First Name</span>
+                  <span className="text-sm font-semibold">Home Address</span>
                   <input
                     type="text"
-                    placeholder="Enter Name"
+                    placeholder="Address"
                     className="form-control text-xs border border-gray-300 outline-gray-300 focus:outline-[#41cfd1] rounded-md py-1.5 px-2 font-semibold"
                   />
                 </div>
                 <div className="flex flex-col gap-4 justify-center">
-                  <span className="text-sm font-semibold">First Name</span>
+                  <span className="text-sm font-semibold">Bussiness Name</span>
                   <input
                     type="text"
-                    placeholder="Enter Name"
+                    placeholder="Bussiness Name"
                     className="form-control text-xs border border-gray-300 outline-gray-300 focus:outline-[#41cfd1] rounded-md py-1.5 px-2 font-semibold"
                   />
                 </div>
