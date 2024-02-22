@@ -123,7 +123,7 @@ const BookStallModal = ({ open, setOpen }) => {
                 {/* Fourth row */}
 
                 <tr>
-                  <td className="premium bdr bg-red-600 border-b border-black">
+                  <td className="premium bdr bg-red-600 border-b border-black text-white">
                     <a href="#">92</a>
                   </td>
                   <td className="premium bg-[#FFFF00]"></td>
@@ -177,7 +177,7 @@ const BookStallModal = ({ open, setOpen }) => {
                     12A
                   </td>
                   <td rowSpan={8}></td>
-                  <td className=" bg-red-600 premium border-b border-black">
+                  <td className=" bg-[#64A2AC]  premium border-b border-black">
                     <a href="#">48</a>
                   </td>
                   <td className=" bg-[#D8E4BC] premium border-b border-black">
@@ -186,7 +186,7 @@ const BookStallModal = ({ open, setOpen }) => {
                   <td className=" bg-[#D8E4BC] premium border-b border-black">
                     <a href="#">46</a>
                   </td>
-                  <td className="bg-red-600 premium border-b border-black">
+                  <td className="bg-red-600 premium border-b border-black text-white">
                     <a href="#">45</a>
                   </td>
                   <td className="bg-[#64A2AC] premium border-b border-black">
@@ -244,46 +244,46 @@ const BookStallModal = ({ open, setOpen }) => {
                   <td className="premium bdr bg-red-600 border-b border-black">
                     <a href="#">12</a>
                   </td>
-                  <td className="bg-[#00FF01] premium border-b border-black">
-                    <a href="#">91</a>
+                  <td className="bg-[#64A2AC]  premium border-b border-black">
+                    <a href="#">35</a>
                   </td>
                   <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">90</a>
+                    <a href="#">36</a>
+                  </td>
+                  <td className=" bg-[#D8E4BC] premium border-b border-black">
+                    <a href="#">37</a>
                   </td>
                   <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">89</a>
+                    <a href="#">38</a>
                   </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">88</a>
-                  </td>
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">87</a>
+                  <td className="bg-red-600 premium border-b border-black">
+                    <a href="#">39</a>
                   </td>
                   <td className="bg-[#64A2AC] premium border-b border-black">
-                    <a href="#">86</a>
+                    <a href="#">40</a>
                   </td>
-                  <td className="bg-[#BE514B] text-white  premium  border-b border-black">
-                    <a href="#">85</a>
+                  <td className="bg-[#00FF01] text-white  premium  border-b border-black">
+                    <a href="#">41</a>
                   </td>
                   <td className=""></td>{" "}
                   <td className="bg-red-600 premium text-white border-b border-black ">
-                    <a href="#">112</a>
+                    <a href="#">79</a>
                   </td>{" "}
                   <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">111</a>
+                    <a href="#">78</a>
                   </td>
                   <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">110</a>
+                    <a href="#">77</a>
                   </td>
                   <td className="bg-[#D8E4BC]   premium border-b border-black">
-                    <a href="#">109</a>
+                    <a href="#">76</a>
                   </td>
                   <td className="bg-[#64A2AC]  premium border-b border-black">
-                    <a href="#">108</a>
+                    <a href="#">75</a>
                   </td>
                   <td className="bg-[#79AE58]  premium "></td>
                   <td className="bg-[#D8E4BC]    premium border-b border-black">
-                    <a href="#">107</a>
+                    <a href="#">58</a>
                   </td>
                 </tr>
                 {/* 8 row */}
@@ -292,182 +292,163 @@ const BookStallModal = ({ open, setOpen }) => {
                   <td className="premium bdr bg-red-600 border-b border-black">
                     <a href="#">11</a>
                   </td>
+                  <td className="bg-[#64A2AC] premium border-b border-black">
+                    <a href="#">34</a>
+                  </td>
+                  <td className=" bg-red-600 premium border-b border-black">
+                    <a href="#">33</a>
+                  </td>
+                  <td className=" bg-[#D8E4BC] premium border-b border-black">
+                    <a href="#">32</a>
+                  </td>
+                  <td className=" bg-[#D8E4BC] premium border-b border-black">
+                    <a href="#">31</a>
+                  </td>
                   <td className="bg-[#00FF01] premium border-b border-black">
-                    <a href="#">91</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">90</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">89</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">88</a>
-                  </td>
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">87</a>
+                    <a href="#">30</a>
                   </td>
                   <td className="bg-[#64A2AC] premium border-b border-black">
-                    <a href="#">86</a>
+                    <a href="#">29</a>
                   </td>
-                  <td className="bg-[#BE514B] text-white  premium  border-b border-black">
-                    <a href="#">85</a>
+                  <td className="bg-red-600 text-white  premium  border-b border-black">
+                    <a href="#">28</a>
                   </td>
                   <td className=""></td>{" "}
                   <td className="bg-red-600 premium text-white border-b border-black ">
-                    <a href="#">112</a>
+                    <a href="#">70</a>
                   </td>{" "}
                   <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">111</a>
+                    <a href="#">71</a>
                   </td>
                   <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">110</a>
+                    <a href="#">72</a>
                   </td>
                   <td className="bg-[#D8E4BC]   premium border-b border-black">
-                    <a href="#">109</a>
+                    <a href="#">73</a>
                   </td>
                   <td className="bg-[#64A2AC]  premium border-b border-black">
-                    <a href="#">108</a>
+                    <a href="#">74</a>
                   </td>
                   <td className="bg-[#79AE58]  premium "></td>
                   <td className="bg-[#D8E4BC]    premium border-b border-black">
-                    <a href="#">107</a>
+                    <a href="#">57</a>
                   </td>
                 </tr>
 
                 {/* 9 r0w */}
                 <tr>
                   <td className="premium bg-red-600 text-white  " rowSpan={2}>
-                    12A
+                    10
                   </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">48</a>
+                  <td className="  premium border-b border-black"></td>
+                  <td className="  premium border-b border-black"></td>
+                  <td className=" premium border-b border-black font-semibold">
+                    Phase1
                   </td>
-                  <td className=" bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">47</a>
-                  </td>
-                  <td className=" bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">46</a>
-                  </td>
-                  <td className="bg-red-600 premium border-b border-black">
-                    <a href="#">45</a>
-                  </td>
-                  <td className="bg-[#64A2AC] premium border-b border-black">
-                    <a href="#">44</a>
-                  </td>
-                  <td className="bg-[#BE514B] text-white  premium border-b border-black ">
-                    <a href="#">43</a>
-                  </td>
-                  <td className="bg-[#BE514B] text-white  premium border-b border-black ">
-                    <a href="#">42</a>
-                  </td>
+                  <td className=" premium border-b border-black"></td>
+                  <td className=" premium border-b border-black"></td>
+                  <td className=" text-white  premium border-b border-black "></td>
+                  <td className=" text-white  premium border-b border-black "></td>
                   <td className=""></td>{" "}
-                  <td className="bg-red-600 premium text-white  border-b border-black">
-                    <a href="#">80</a>
-                  </td>{" "}
-                  <td className="bg-red-600 premium border-b border-black">
-                    <a href="#">81</a>
+                  <td className="bg-red-600 premium text-white  border-b border-black"></td>{" "}
+                  <td className="bg-[#79AE58]  premium border-b border-black font-semibold">
+                    Phase2
                   </td>
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">82</a>
-                  </td>
-                  <td className="bg-[#D8E4BC]   premium border-b border-black">
-                    <a href="#">83</a>
-                  </td>
-                  <td className="bg-[#64A2AC]  premium border-b border-black">
-                    <a href="#">84</a>
-                  </td>
+                  <td className="bg-[#79AE58]  premium border-b border-black"></td>
+                  <td className="bg-[#79AE58]    premium border-b border-black"></td>
+                  <td className="bg-[#79AE58]  premium border-b border-black"></td>
                   <td className="bg-[#79AE58]  premium"></td>
                   <td className=" bg-[#64A2AC]  premium" rowSpan={2}>
                     <a href="#">59</a>
                   </td>
                 </tr>
+
                 {/* 10 row */}
                 <tr>
+                  <td className=" bg-[#64A2AC] premium border-b border-black">
+                    <a href="#">21</a>
+                  </td>
                   <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">48</a>
+                    <a href="#">22</a>
                   </td>
-                  <td className=" bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">47</a>
+                  <td className=" bg-red-600 premium border-b border-black">
+                    <a href="#">23</a>
                   </td>
-                  <td className=" bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">46</a>
+                  <td className="bg-[#00FF01]  premium border-b border-black">
+                    <a href="#">24</a>
                   </td>
                   <td className="bg-red-600 premium border-b border-black">
-                    <a href="#">45</a>
+                    <a href="#">25</a>
                   </td>
-                  <td className="bg-[#64A2AC] premium border-b border-black">
-                    <a href="#">44</a>
-                  </td>
-                  <td className="bg-[#BE514B] text-white  premium border-b border-black ">
-                    <a href="#">43</a>
+                  <td className="bg-[#64A2AC] text-white  premium border-b border-black ">
+                    <a href="#">26</a>
                   </td>
                   <td className="bg-[#BE514B] text-white  premium border-b border-black ">
-                    <a href="#">42</a>
+                    <a href="#">27</a>
                   </td>
                   <td className=""></td>{" "}
-                  <td className="bg-red-600 premium text-white  border-b border-black">
-                    <a href="#">80</a>
+                  <td className="bg-[#00FF01] premium text-white  border-b border-black">
+                    <a href="#">69</a>
                   </td>{" "}
-                  <td className="bg-red-600 premium border-b border-black">
-                    <a href="#">81</a>
+                  <td className="bg-[#D8E4BC] premium border-b border-black">
+                    <a href="#">68</a>
                   </td>
                   <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">82</a>
+                    <a href="#">67</a>
                   </td>
                   <td className="bg-[#D8E4BC]   premium border-b border-black">
-                    <a href="#">83</a>
+                    <a href="#">66</a>
                   </td>
                   <td className="bg-[#64A2AC]  premium border-b border-black">
-                    <a href="#">84</a>
+                    <a href="#">65</a>
                   </td>
                   <td className="bg-[#79AE58]  premium"></td>
                 </tr>
                 {/* 10 row */}
                 <tr>
                   <td className="premium bdr bg-red-600 border-b border-black">
-                    <a href="#">11</a>
-                  </td>
-                  <td className="bg-[#00FF01] premium border-b border-black">
-                    <a href="#">91</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">90</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">89</a>
-                  </td>
-                  <td className=" bg-red-600 premium border-b border-black">
-                    <a href="#">88</a>
-                  </td>
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">87</a>
+                    <a href="#">9</a>
                   </td>
                   <td className="bg-[#64A2AC] premium border-b border-black">
-                    <a href="#">86</a>
+                    <a href="#">20</a>
+                  </td>
+                  <td className=" bg-[#00FF01] premium border-b border-black">
+                    <a href="#">19</a>
+                  </td>
+                  <td className=" bg-red-600 premium border-b border-black">
+                    <a href="#">18</a>
+                  </td>
+                  <td className=" bg-red-600 premium border-b border-black">
+                    <a href="#">17</a>
+                  </td>
+                  <td className="bg-[#00FF01] premium border-b border-black">
+                    <a href="#">16</a>
+                  </td>
+                  <td className="bg-[#64A2AC] premium border-b border-black">
+                    <a href="#">15</a>
                   </td>
                   <td className="bg-[#BE514B] text-white  premium  border-b border-black">
-                    <a href="#">85</a>
+                    <a href="#">14</a>
                   </td>
                   <td className=""></td>{" "}
                   <td className="bg-red-600 premium text-white border-b border-black ">
-                    <a href="#">112</a>
+                    <a href="#">60</a>
                   </td>{" "}
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">111</a>
+                  <td className="bg-red-600 premium border-b border-black">
+                    <a href="#">61</a>
                   </td>
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">110</a>
+                  <td className="bg-red-600 premium border-b border-black">
+                    <a href="#">62</a>
                   </td>
                   <td className="bg-[#D8E4BC]   premium border-b border-black">
-                    <a href="#">109</a>
+                    <a href="#">63</a>
                   </td>
-                  <td className="bg-[#64A2AC]  premium border-b border-black">
-                    <a href="#">108</a>
+                  <td className="bg-[#00FF01]   premium border-b border-black">
+                    <a href="#">64</a>
                   </td>
                   <td className="bg-[#79AE58]  premium "></td>
                   <td className="bg-[#D8E4BC]    premium border-b border-black">
-                    <a href="#">107</a>
+                    <a href="#">55</a>
                   </td>
                 </tr>
 
@@ -497,12 +478,10 @@ const BookStallModal = ({ open, setOpen }) => {
                 <tr>
                   <td className="premium bdr bg-[#BE514B]" colSpan={2}>
                     <a href="#" className="text-white">
-                     8
+                      8
                     </a>
                   </td>
-                 
-                
-                  <td className="bg-[#00FF01] premium border-b border-black">
+                  <td className="bg-[#64A2AC]  premium border-b border-black">
                     <a href="#">7</a>
                   </td>
                   <td className=" bg-red-600 premium border-b border-black">
@@ -514,34 +493,34 @@ const BookStallModal = ({ open, setOpen }) => {
                   <td className=" bg-red-600 premium border-b border-black">
                     <a href="#">4</a>
                   </td>
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
+                  <td className="bg-red-600  premium border-b border-black">
                     <a href="#">3</a>
                   </td>
-                  <td className="bg-[#64A2AC] premium border-b border-black">
+                  <td className="bg-red-600  premium border-b border-black">
                     <a href="#">2</a>
                   </td>
-                  <td className="bg-[#BE514B] text-white  premium  border-b border-black">
+                  <td className="bg-[#BE514B]  text-white  premium  border-b border-black">
                     <a href="#">1</a>
                   </td>
                   <td className=""></td>{" "}
                   <td className="bg-red-600 premium text-white border-b border-black ">
-                    <a href="#">112</a>
+                    <a href="#">49</a>
                   </td>{" "}
-                  <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">111</a>
+                  <td className="bg-[#00FF01] premium border-b border-black">
+                    <a href="#">50</a>
                   </td>
                   <td className="bg-[#D8E4BC] premium border-b border-black">
-                    <a href="#">110</a>
+                    <a href="#">51</a>
                   </td>
-                  <td className="bg-[#D8E4BC]   premium border-b border-black">
-                    <a href="#">109</a>
+                  <td className="bg-[#00FF01]   premium border-b border-black">
+                    <a href="#">52</a>
                   </td>
                   <td className="bg-[#64A2AC]  premium border-b border-black">
-                    <a href="#">108</a>
+                    <a href="#">53</a>
                   </td>
                   <td className="bg-[#BE514B]  premium "></td>
                   <td className="bg-[#BE514B] text-white premium" colSpan={2}>
-                    <a href="#">105</a>
+                    <a href="#">54</a>
                   </td>
                 </tr>
               </table>
