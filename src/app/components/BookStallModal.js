@@ -88,10 +88,10 @@ const BookStallModal = ({ open, setOpen }) => {
                     slotNum={99}
                     onClick={() => handleColorSelection("#64A2AC", "$20", 99)}
                   />
-                  <td className="bg-red-600 border-b basic" colSpan={2}>
+                  <td className="bg-[#dc2626]border-b basic" colSpan={2}>
                     <a href="#">Media01</a>
                   </td>
-                  <td className="bg-red-600 border-b premium basic2">
+                  <td className="bg-[#dc2626]border-b premium basic2">
                     <a href="#">Media02</a>
                   </td>
                   <SlotCell
@@ -212,21 +212,21 @@ const BookStallModal = ({ open, setOpen }) => {
                     }
                   />
                   <SlotCell
-                    color="bg-red-600 "
+                    color="bg-[#dc2626]"
                     slotNum={90}
                     // onClick={() => handleColorSelection("bg-[#00FF01]", "$30")}
                   />
                   <SlotCell
-                    color="bg-red-600 "
+                    color="bg-[#dc2626]"
                     slotNum={89}
                     // onClick={() => handleColorSelection("bg-[#00FF01]", "$30")}
                   />
                   <SlotCell
-                    color="bg-red-600 "
+                    color="bg-[#dc2626]"
                     slotNum={88}
                     // onClick={() => handleColorSelection("bg-[#00FF01]", "$30")}
                   />
-                  <SlotCell color="bg-red-600 " slotNum={87} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={87} />
                   <SlotCell
                     color="bg-[#64A2AC] "
                     slotNum={86}
@@ -243,7 +243,7 @@ const BookStallModal = ({ open, setOpen }) => {
                   />
                   <td className=""></td>{" "}
                   <SlotCell
-                    color="bg-red-600 "
+                    color="bg-[#dc2626]"
                     slotNum={112}
                     // onClick={() => handleColorSelection("bg-[#00FF01]", "$30")}
                   />
@@ -288,7 +288,7 @@ const BookStallModal = ({ open, setOpen }) => {
                 {/* Fifth row */}
 
                 <tr>
-                  <SlotCell color="bg-red-600 " slotNum={"12A"} rowSpan="2" />
+                  <SlotCell color="bg-[#dc2626]" slotNum={"12A"} rowSpan="2" />
                   <td rowSpan={8}></td>
                   <SlotCell
                     color="bg-[#64A2AC] "
@@ -311,7 +311,7 @@ const BookStallModal = ({ open, setOpen }) => {
                       handleColorSelection("bg-[#D8E4BC] ", "$30", 46)
                     }
                   />
-                  <SlotCell color="bg-red-600 " slotNum={45} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={45} />
                   <SlotCell
                     color="bg-[#64A2AC] "
                     slotNum={44}
@@ -335,7 +335,7 @@ const BookStallModal = ({ open, setOpen }) => {
                   />
                   <td className=""></td>{" "}
                   <SlotCell color="bg-red-600" slotNum={80} />
-                  <SlotCell color="bg-red-600 " slotNum={81} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={81} />
                   <SlotCell
                     color="bg-[#D8E4BC] "
                     slotNum={82}
@@ -368,7 +368,7 @@ const BookStallModal = ({ open, setOpen }) => {
                   />
                 </tr>
                 <tr>
-                  {/* <td className="premium bg-red-600 text-white " rowSpan={2}>
+                  {/* <td className="premium bg-[#dc2626]text-white " rowSpan={2}>
                     12A
                   </td> */}
                   {/* <td rowSpan={8}></td> */}
@@ -389,7 +389,7 @@ const BookStallModal = ({ open, setOpen }) => {
                 </tr>
                 {/* 7 row */}
                 <tr>
-                  <SlotCell color="bg-red-600 " slotNum={12} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={12} />
                   <SlotCell
                     color="bg-[#64A2AC] "
                     slotNum={35}
@@ -397,7 +397,7 @@ const BookStallModal = ({ open, setOpen }) => {
                       handleColorSelection("bg-[#64A2AC] ", "$30", 35)
                     }
                   />
-                  <SlotCell color="bg-red-600 " slotNum={36} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={36} />
                   <SlotCell
                     color="bg-[#D8E4BC] "
                     slotNum={37}
@@ -405,8 +405,8 @@ const BookStallModal = ({ open, setOpen }) => {
                       handleColorSelection("bg-[#D8E4BC]", "$30", 37)
                     }
                   />
-                  <SlotCell color="bg-red-600 " slotNum={38} />
-                  <SlotCell color="bg-red-600 " slotNum={39} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={38} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={39} />
                   <SlotCell
                     color="bg-[#64A2AC] "
                     slotNum={40}
@@ -422,7 +422,7 @@ const BookStallModal = ({ open, setOpen }) => {
                     }
                   />
                   <td className=""></td>{" "}
-                  <SlotCell color="bg-red-600 " slotNum={79} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={79} />
                   <SlotCell
                     color="bg-[#D8E4BC] "
                     slotNum={78}
@@ -463,7 +463,7 @@ const BookStallModal = ({ open, setOpen }) => {
                 {/* 8 row */}
 
                 <tr>
-                  <SlotCell color="bg-red-600 " slotNum={11} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={11} />
                   <SlotCell
                     color="bg-[#64A2AC]   "
                     slotNum={34}
@@ -471,7 +471,7 @@ const BookStallModal = ({ open, setOpen }) => {
                       handleColorSelection("bg-[#64A2AC] ", "$30", 34)
                     }
                   />
-                  <SlotCell color="bg-red-600 " slotNum={33} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={33} />
                   <SlotCell
                     color="bg-[#D8E4BC]   "
                     slotNum={32}
@@ -500,9 +500,9 @@ const BookStallModal = ({ open, setOpen }) => {
                       handleColorSelection("bg-[#64A2AC] ", "$30", 29)
                     }
                   />
-                  <SlotCell color="bg-red-600 " slotNum={28} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={28} />
                   <td className=""></td>{" "}
-                  <SlotCell color="bg-red-600 " slotNum={70} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={70} />
                   <SlotCell
                     color="bg-[#D8E4BC] "
                     slotNum={71}
@@ -543,7 +543,7 @@ const BookStallModal = ({ open, setOpen }) => {
 
                 {/* 9 r0w */}
                 <tr>
-                  <SlotCell color="bg-red-600 " slotNum={10} rowSpan={2} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={10} rowSpan={2} />
                   <td className="  premium border-b border-black"></td>
                   <td className="  premium border-b border-black"></td>
                   <td className=" premium border-b border-black font-semibold">
@@ -554,7 +554,7 @@ const BookStallModal = ({ open, setOpen }) => {
                   <td className=" text-white  premium border-b border-black "></td>
                   <td className=" text-white  premium border-b border-black "></td>
                   <td className=""></td>{" "}
-                  <td className="bg-red-600 premium text-white  border-b border-black"></td>{" "}
+                  <td className="bg-[#dc2626]premium text-white  border-b border-black"></td>{" "}
                   <td className="bg-[#79AE58]  premium border-b border-black font-semibold">
                     Phase2
                   </td>
@@ -581,8 +581,8 @@ const BookStallModal = ({ open, setOpen }) => {
                       handleColorSelection("bg-[#64A2AC]  ", "$30", 21)
                     }
                   />
-                  <SlotCell color="bg-red-600 " slotNum={22} />
-                  <SlotCell color="bg-red-600 " slotNum={23} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={22} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={23} />
                   <SlotCell
                     color="bg-[#00FF01] "
                     slotNum={24}
@@ -590,7 +590,7 @@ const BookStallModal = ({ open, setOpen }) => {
                       handleColorSelection("bg-[#00FF01]  ", "$30", 24)
                     }
                   />
-                  <SlotCell color="bg-red-600 " slotNum={25} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={25} />
                   <SlotCell
                     color="bg-[#64A2AC] "
                     slotNum={26}
@@ -645,7 +645,7 @@ const BookStallModal = ({ open, setOpen }) => {
                 </tr>
                 {/* 10 row */}
                 <tr>
-                  <SlotCell color="bg-red-600 " slotNum={9} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={9} />
                   <SlotCell
                     color="bg-[#64A2AC] "
                     slotNum={20}
@@ -696,7 +696,7 @@ const BookStallModal = ({ open, setOpen }) => {
                     }
                   />
                   <td className=""></td>{" "}
-                  <SlotCell color="bg-red-600 " slotNum={60} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={60} />
                   <SlotCell
                     color="bg-[#64A2AC] "
                     slotNum={61}
@@ -802,7 +802,7 @@ const BookStallModal = ({ open, setOpen }) => {
                       handleColorSelection("bg-[#D8E4BC]", "$30", 3)
                     }
                   />
-                  <SlotCell color="bg-red-600 " slotNum={2} />
+                  <SlotCell color="bg-[#dc2626]" slotNum={2} />
                   <SlotCell
                     color="bg-[#BE514B] "
                     slotNum={1}

@@ -15,7 +15,7 @@ const BookStall = () => {
     <div className="mt-6">
       <div className="flex flex-col items-center gap-1">
         <h1 className="font-semibold text-[1.6rem]">Book Stalls</h1>
-        <p className="text-gray-500 text-[1rem]">
+        <p className="text-customGrey-500 text-[1rem]">
           Interested in showcasing your products or services at our event?
           Reserve your stall now!
         </p>
