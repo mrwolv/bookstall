@@ -53,6 +53,22 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      {/* About women */}
+      <div className="mt-10  px-5 md:px-0 md:mt-16 ">
+        <h1 className="text-[#333369] text-[1.8rem] md:text-[2.1rem] font-bold md:flex md:items-center  md:justify-center">
+          About Women Listed
+        </h1>
+        <p className="md:px-52 py-4  md:text-[1.1rem]  md:text-center">
+          “Women Listed Bazaar” is a Women-Led One-Day Exhibition that aims to
+          empower and promote women entrepreneurs, artisans and innovators. With
+          a variety of stalls showcasing unique products and services, it will
+          give participants an opportunity to grow their businesses & network
+          with fellow women entrepreneurs. So, whether you are an established
+          business, a social entrepreneur, a start-up business, a Homepreneur,
+          eco-artist, or even a Student entrepreneur, you are welcome to be a
+          part of the Exhibition.
+        </p>
+      </div>
     </section>
   );
 };

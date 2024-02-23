@@ -14,7 +14,6 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 
-
 const DrawerComponent = ({ open, setOpen }) => {
   console.log(open);
   return (
@@ -44,7 +43,7 @@ const DrawerComponent = ({ open, setOpen }) => {
               <span>Login</span>
             </p>
             <p className="flex flex-col items-center justify-center hover:cursor-pointer">
-              <FaUserGraduate  size={27} />
+              <FaUserGraduate size={27} />
               <span>Register</span>
             </p>
           </div>
