@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="md:m-10 mt-5">
+    <section className="md:m-10 md:mx-12 mt-5">
       <div className="px-5 flex flex-col md:flex-row md:items-center  md:gap-10 ">
         <Image
           src="/headerImage.jpg"
