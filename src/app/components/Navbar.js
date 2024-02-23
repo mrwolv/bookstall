@@ -1,5 +1,7 @@
+"use client"
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { CiUser } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiCategory } from "react-icons/bi";
@@ -13,8 +15,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import DrawerComponent from "@/components/drawer";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="bg-[#FDFDFD] shadow-md md:px-20 px-3">
       <div className="flex items-center justify-between  ">
@@ -39,9 +44,7 @@ const Navbar = () => {
             <CiUser size={25} />
             <span className="text-xs">Register</span>
           </p>
-          <div className="bg-[#64A2AD] px-2 py-2.5 mb-2.5">
-            <GiHamburgerMenu className="text-white" />
-          </div>
+          <DrawerComponent open={open} setOpen={setOpen}/>
         </div>
         <div className="hidden md:flex md:items-center md:justify-between  md:gap-7">
           <p className="flex flex-col items-center justify-center hover:cursor-pointer">

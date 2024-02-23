@@ -27,7 +27,7 @@ const HeroSection = () => {
           </div>
           <div className="mt-5 md:px-4 md:mt-10 flex items-center  gap-8 ">
             <FaCalendar size={45} color="#333369" />
-            <p className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center">
               <p className="text-[1.6rem] md:text-[1.7rem] text-[#333369] font-semibold">
                 <span>05</span>
                 <span>.</span>
@@ -35,10 +35,10 @@ const HeroSection = () => {
                 <span>.</span>
                 <span>2024</span>
               </p>
-              <span className="  text-medium md:text-[1rem] text-[#333369]">
+              <p className="  text-medium md:text-[1rem] text-[#333369]">
                 Shagun Farm delhi
-              </span>
-            </p>
+              </p>
+            </div>
           </div>
           <div className=" mt-8 md:px-5 flex items-center gap-5 ">
             <Button className="bg-[#F8669E] hover:bg-[#C83F74]">
