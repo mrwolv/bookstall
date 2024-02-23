@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const BookStall = () => {
   return (
     <section className=" bg-[rgb(243,243,243)] py-5 ">
-      <div className="px-5 mt-4 md:m-12 ">
+      <div className="px-5 mt-4 md:px-16 ">
         <div className="flex flex-col items-start gap-2 ">
           <h1 className="mt-4 capitalize text-[#333369] text-[1.8rem] md:text-[2.1rem] font-bold">
             Book your Stall
