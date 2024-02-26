@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import BookStallBuy from "./BookStallBuy";
+import { Button } from "@/components/ui/button";
 
 const SlotCell = ({ slotNum, color, onClick, colSpan, border, rowSpan }) => {
   return (
@@ -32,14 +33,13 @@ const BookStallModal = ({ open, setOpen }) => {
     <div className=" text-black shadow-xl ">
       {open && (
         <div
-          className="fixed top-[10%] -translate-x-1/2 overflow-y-auto
-        h-[90%] rounded-md bg-white shadow-xl px-5 border outline-dotted "
+          className="fixed top-[10%]  left-[50%] -translate-x-1/2 overflow-y-auto
+        h-[90%] rounded-md bg-white shadow-xl px-5 border md:mt-10 md:py-6  "
         >
-          <h1 className="font-semibold text-[1.4rem]  flex items-center justify-center">
-            Stall Layout
-          </h1>
-          <div className=" flex items-center justify-between mt-3 ">
-            <span className=" text-[1.1rem]">Book Stall Bazar 2024</span>
+          <div className=" mt-4 flex items-center justify-between mt-3 md:px-[7.9rem]  ">
+            <h1 className="capitalize text-[#333369] text-[1.4rem] md:text-[1.7rem] font-semibold">
+              Select a stall to proceed with the booking
+            </h1>
             <button
               className="text-[1rem] hover:underline"
               onClick={() => setOpen(!open)}
@@ -47,7 +47,34 @@ const BookStallModal = ({ open, setOpen }) => {
               Back
             </button>
           </div>
-          <div className="py-4 mr-52 ">
+          <div className=" md:mt-6 flex items-center gap-3 md:px-[7.9rem] ">
+            <Button
+              className="bg-[#F8669E] hover:bg-[#C83F74] px-4 p-2.5"
+              onClick={() => console.log("Working")}
+            >
+              View All
+            </Button>
+            <Button
+              variant="outline"
+              className="border-[#F8669E] text-[#F8669E] hover:text-[#F8669E] hover:bg-inherit px-4 p-2.5"
+            >
+              Basic Stall 1
+            </Button>
+            <Button
+              variant="outline"
+              className="border-[#F8669E] text-[#F8669E] hover:text-[#F8669E] hover:bg-inherit px-4 p-2.5"
+            >
+              Basic Stall 2
+            </Button>
+            <Button
+              variant="outline"
+              className="border-[#F8669E] text-[#F8669E] hover:text-[#F8669E] hover:bg-inherit px-4 p-2.5"
+            >
+              Premium Stall
+            </Button>
+          </div>
+
+          <div className="p-4 md:py-10 mr-52 ">
             <div className="lg:w-9/12 lg:m-auto sm:w-full mb-2 px-0 text-center tbls">
               <table className="text-sm table-auto" border="1" width={100}>
                 {/* First table */}
@@ -88,10 +115,10 @@ const BookStallModal = ({ open, setOpen }) => {
                     slotNum={99}
                     onClick={() => handleColorSelection("#64A2AC", "$20", 99)}
                   />
-                  <td className="bg-[#dc2626]border-b basic" colSpan={2}>
+                  <td className="bg-[#dc2626] border-b basic" colSpan={2}>
                     <a href="#">Media01</a>
                   </td>
-                  <td className="bg-[#dc2626]border-b premium basic2">
+                  <td className="bg-[#dc2626] border-b premium basic2">
                     <a href="#">Media02</a>
                   </td>
                   <SlotCell
@@ -147,13 +174,13 @@ const BookStallModal = ({ open, setOpen }) => {
                   <SlotCell color="bg-[#FFFF00]" border="false" />
                   <SlotCell color="bg-[#FFFF00]" border="false" />
                   <SlotCell color="bg-[#FFFF00]" border="false" />
+                  <SlotCell color="bg-[#FFFF00]" border="false" />
                   <SlotCell
                     color="bg-[#FFFF00]"
-                    colSpan={2}
                     border="false"
+                    colSpan={2}
                     slotNum="Phase3"
                   />
-                  <SlotCell color="bg-[#FFFF00]" border="false" />
 
                   <SlotCell color="bg-[#FFFF00]" border="false" />
                   <SlotCell color="bg-[#FFFF00]" border="false" />
@@ -739,8 +766,8 @@ const BookStallModal = ({ open, setOpen }) => {
                 <tr>
                   <td className="premium bdr bg-[#BE514B] "></td>
                   <td className=" premium "></td>
-                  <td className=" premium font-semibold">Phase1</td>
                   <td className=" premium "></td>
+                  <td className=" premium font-semibold">Phase1</td>
                   <td className="  premium "></td>
                   <td className="premium "></td>
                   <td className=" premium "></td>
@@ -859,14 +886,35 @@ const BookStallModal = ({ open, setOpen }) => {
               </table>
             </div>
           </div>
-          <div className="mt-5 px-36 flex items-center justify-between ">
-            <Image src={"/prices.webp"} alt="pRICES" height={200} width={400} />
-            <Image
-              src={"/prOcess.webp"}
-              alt="pRICES"
-              height={100}
-              width={150}
-            />
+          <div className="mt-5 px-[7.9rem] flex items-center justify-between ">
+            <div className="flex items-center gap-3">
+              <span className="bg-[#BE514B] h-8 w-8 rounded-lg -mt-10"></span>
+              <p className="flex flex-col items-start justify-center text-[#707070]">
+                <span className="font-semibold">Premium Stall</span>
+                <span>3 X 2 Meter (Font 3m/10ft)</span>
+                <span className="font-semibold">35,000INR</span>
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="bg-[#64A2AC] h-8 w-8 rounded-lg -mt-10"></span>
+              <p className="flex flex-col items-start justify-center text-[#707070]">
+                <span className="font-semibold">Basic Stall 2</span>
+                <span>3 X 2 Meter (Font 3m/10ft)</span>
+                <span className="font-semibold">35,000INR</span>
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="bg-[#D8E4BC] h-8 w-8 rounded-lg -mt-10"></span>
+              <p className="flex flex-col items-start justify-center text-[#707070]">
+                <span className="font-semibold">Premium Stall</span>
+                <span>3 X 2 Meter (Font 3m/10ft)</span>
+                <span className="font-semibold">35,000INR</span>
+              </p>
+            </div>
+            <div className="flex items-center gap-3 -mt-10">
+              <span className="bg-red-600 h-8 w-8 rounded-lg  "></span>
+              <span>Sold out </span>
+            </div>
           </div>
 
           <BookStallBuy

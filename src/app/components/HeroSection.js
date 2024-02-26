@@ -1,9 +1,15 @@
+"use client"
+
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { FaCalendar } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+
+  const [open,setOpen] = useState(false) 
+
   return (
     <section className="md:m-10 md:mx-12 mt-5">
       <div className="px-5 flex flex-col md:flex-row md:items-center  md:gap-10 ">
@@ -41,7 +47,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className=" mt-8 md:px-5 flex items-center gap-5 ">
-            <Button className="bg-[#F8669E] hover:bg-[#C83F74]">
+            <Button className="bg-[#F8669E] hover:bg-[#C83F74]" onClick={()=>console.log("Working")}>
               Explore Stalls
             </Button>
             <Button
@@ -65,7 +71,7 @@ const HeroSection = () => {
           give participants an opportunity to grow their businesses & network
           with fellow women entrepreneurs. So, whether you are an established
           business, a social entrepreneur, a start-up business, a Homepreneur,
-          eco-artist, or even a Student entrepreneur, you are welcome to be a
+          eco-artist, or even a Student entrepreneur,you are welcome to be a
           part of the Exhibition.
         </p>
       </div>

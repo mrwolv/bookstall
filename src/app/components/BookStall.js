@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+import BookStallModal from "./BookStallModal";
 
 const BookStall = () => {
+  const [open, setOpen] = useState(true);
+
   return (
     <section className=" bg-[rgb(243,243,243)] py-5 ">
       <div className="px-5 mt-4 md:px-16 ">
@@ -33,7 +38,10 @@ const BookStall = () => {
                 3X2 Meter (Front 3m/10ft){" "}
               </span>
             </p>
-            <Button className="bg-[#F8669E] hover:bg-[#F8669E] w-24">
+            <Button
+              className="bg-[#F8669E] hover:bg-[#F8669E] w-24"
+              onClick={() => setOpen(true)}
+            >
               Book now
             </Button>
           </div>
@@ -54,7 +62,10 @@ const BookStall = () => {
                 3X2 Meter (Front 3m/10ft){" "}
               </span>
             </p>
-            <Button className="bg-[#F8669E] hover:bg-[#F8669E] w-24">
+            <Button
+              className="bg-[#F8669E] hover:bg-[#F8669E] w-24"
+              onClick={() => setOpen(true)}
+            >
               Book now
             </Button>
           </div>
@@ -75,12 +86,16 @@ const BookStall = () => {
                 3X2 Meter (Front 3m/10ft){" "}
               </span>
             </p>
-            <Button className="bg-[#F8669E] hover:bg-[#F8669E] w-24">
+            <Button
+              className="bg-[#F8669E] hover:bg-[#F8669E] w-24"
+              onClick={() => setOpen(true)}
+            >
               Book now
             </Button>
           </div>
         </div>
       </div>
+      <BookStallModal open={open} setOpen={setOpen} />
     </section>
   );
 };
