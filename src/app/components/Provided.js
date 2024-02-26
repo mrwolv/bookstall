@@ -19,8 +19,8 @@ const Provided = () => {
           </p>
         </div>
 
-        <div className="md:flex md:flex-col md:mr-10 md:gap-10 md:px-12 md:py-5 ">
-          <div className="md:flex md:items-center md:justify-between md:gap-20">
+        <div className="flex flex-row   px-5   md:flex-col md:mr-10 md:gap-10 md:px-12 md:py-5 ">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-20">
             <p className="flex flex-col gap-2 md:gap-4   md:justify-between  ">
               <TbAirConditioning size={50} color="#F8669E" />
               <span className="text-[#707070] ">Air Conditiner</span>
