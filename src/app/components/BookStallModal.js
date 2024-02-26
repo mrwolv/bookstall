@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Image from "next/image";
+
 import BookStallBuy from "./BookStallBuy";
 import { Button } from "@/components/ui/button";
 
@@ -9,7 +9,7 @@ const SlotCell = ({ slotNum, color, onClick, colSpan, border, rowSpan }) => {
       colSpan={colSpan}
       className={` ${color}  ${
         color === "bg-red-600" ? "cursor-not-allowed" : "cursor-pointer"
-      } ${border ? "" : "border-b border-black"} px-4 py-2 `}
+      } ${border ? "" : "border-b border-black"} px-4 py-2  `}
       onClick={onClick}
       rowSpan={rowSpan}
     >
@@ -22,11 +22,16 @@ const BookStallModal = ({ open, setOpen }) => {
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedPrice, setSelectedPrice] = useState(null);
   const [selectedStallNumber, setSelectedStallNumber] = useState(null);
+  const [selectedButton, setSelectedButton] = useState("viewAll");
 
   const handleColorSelection = (color, price, slotNum) => {
     setSelectedColor(color);
     setSelectedPrice(price);
     setSelectedStallNumber(slotNum);
+  };
+
+  const handleClick = (button) => {
+    setSelectedButton(button);
   };
 
   return (
@@ -36,7 +41,7 @@ const BookStallModal = ({ open, setOpen }) => {
           className="fixed top-[10%]  left-[50%] -translate-x-1/2 overflow-y-auto
         h-[90%] rounded-md bg-white shadow-xl px-5 border md:mt-10 md:py-6  "
         >
-          <div className=" mt-4 flex items-center justify-between mt-3 md:px-[7.9rem]  ">
+          <div className=" mt-4 flex items-center justify-between  md:px-[7.9rem]  ">
             <h1 className="capitalize text-[#333369] text-[1.4rem] md:text-[1.7rem] font-semibold">
               Select a stall to proceed with the booking
             </h1>
@@ -47,32 +52,52 @@ const BookStallModal = ({ open, setOpen }) => {
               Back
             </button>
           </div>
-          <div className=" md:mt-6 flex items-center gap-3 md:px-[7.9rem] ">
+          {/* Button to show the view all premium and basic stalls */}
+
+          <div className="md:mt-6 flex items-center gap-3 md:px-[7.9rem]">
             <Button
-              className="bg-[#F8669E] hover:bg-[#C83F74] px-4 p-2.5"
-              onClick={() => console.log("Working")}
+              className={`px-4 p-2.5 ${
+                selectedButton === "viewAll"
+                  ? "bg-[#F8669E] hover:bg-[#C83F74] text-white"
+                  : "border border-[#F8669E] bg-transparent text-[#F8669E] hover:text-[#F8669E] hover:bg-transparent"
+              }`}
+              onClick={() => handleClick("viewAll")}
             >
               View All
             </Button>
             <Button
-              variant="outline"
-              className="border-[#F8669E] text-[#F8669E] hover:text-[#F8669E] hover:bg-inherit px-4 p-2.5"
+              className={`px-4 p-2.5 ${
+                selectedButton === "basicStall1"
+                  ? "bg-[#F8669E] hover:bg-[#C83F74] text-white"
+                  : "border border-[#F8669E] bg-transparent text-[#F8669E] hover:text-[#F8669E] hover:bg-transparent"
+              }`}
+              onClick={() => handleClick("basicStall1")}
             >
               Basic Stall 1
             </Button>
             <Button
-              variant="outline"
-              className="border-[#F8669E] text-[#F8669E] hover:text-[#F8669E] hover:bg-inherit px-4 p-2.5"
+              className={`px-4 p-2.5 ${
+                selectedButton === "basicStall2"
+                  ? "bg-[#F8669E] hover:bg-[#C83F74] text-white"
+                  : "border border-[#F8669E] bg-transparent text-[#F8669E] hover:text-[#F8669E] hover:bg-transparent"
+              }`}
+              onClick={() => handleClick("basicStall2")}
             >
               Basic Stall 2
             </Button>
             <Button
-              variant="outline"
-              className="border-[#F8669E] text-[#F8669E] hover:text-[#F8669E] hover:bg-inherit px-4 p-2.5"
+              className={`px-4 p-2.5 ${
+                selectedButton === "premiumStall"
+                  ? "bg-[#F8669E] hover:bg-[#C83F74] text-white"
+                  : "border border-[#F8669E] bg-transparent text-[#F8669E] hover:text-[#F8669E] hover:bg-transparent"
+              }`}
+              onClick={() => handleClick("premiumStall")}
             >
               Premium Stall
             </Button>
           </div>
+
+          {/* Table Content */}
 
           <div className="p-4 md:py-10 mr-52 ">
             <div className="lg:w-9/12 lg:m-auto sm:w-full mb-2 px-0 text-center tbls">
@@ -80,14 +105,33 @@ const BookStallModal = ({ open, setOpen }) => {
                 {/* First table */}
                 <tr>
                   <SlotCell
-                    color="bg-[#BE514B]"
+                    color={
+                      selectedButton === "premiumStall"
+                        ? "bg-[#BE514B]"
+                        : selectedButton === "basicStall1"
+                        ? "bg-gray-400"
+                        : selectedButton === "basicStall2"
+                        ?"bg-gray-400"
+                        : "bg-gray-400"
+                    }
+                    stallType="premium"
                     slotNum={94}
                     colSpan="2"
-                    onClick={() => handleColorSelection("#BE514B", "$10", 94)}
+                    onClick={() =>
+                      handleColorSelection("#BE514B", "$10", 94, "premium")
+                    }
                   />
 
                   <SlotCell
-                    color="bg-[#64A2AC]"
+                    color={
+                      selectedButton === "premiumStall"
+                        ? "bg-gray-400"
+                        : selectedButton === "basicStall1"
+                        ? "bg-[#64A2AC]"
+                        : selectedButton === "basicStall2"
+                        ? "bg-gray-400"
+                        : "bg-gray-400"
+                    }
                     slotNum={95}
                     onClick={() => handleColorSelection("#64A2AC", "$20", 95)}
                   />
@@ -115,10 +159,13 @@ const BookStallModal = ({ open, setOpen }) => {
                     slotNum={99}
                     onClick={() => handleColorSelection("#64A2AC", "$20", 99)}
                   />
-                  <td className="bg-[#dc2626] border-b basic" colSpan={2}>
+                  <td
+                    className="bg-[#dc2626] border-b border-black basic"
+                    colSpan={2}
+                  >
                     <a href="#">Media01</a>
                   </td>
-                  <td className="bg-[#dc2626] border-b premium basic2">
+                  <td className="bg-[#dc2626] border-b border-black premium basic2">
                     <a href="#">Media02</a>
                   </td>
                   <SlotCell
