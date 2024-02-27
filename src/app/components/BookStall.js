@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import BookStallModal from "./BookStallModal";
+import BookStallModalCopy from "./BookStallModalcopy";
 
 const BookStall = () => {
   const [open, setOpen] = useState(true);
@@ -95,7 +95,7 @@ const BookStall = () => {
           </div>
         </div>
       </div>
-      <BookStallModal open={open} setOpen={setOpen} />
+      <BookStallModalCopy open={open} setOpen={setOpen} />
     </section>
   );
 };

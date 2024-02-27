@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { stallValue } from "@/app/constant/stall";
 
 import BookStallBuy from "./BookStallBuy";
 import { Button } from "@/components/ui/button";
 
+// component for table data to get data color and other props
 const SlotCell = ({ slotNum, color, onClick, colSpan, border, rowSpan }) => {
   return (
     <td
@@ -23,6 +25,15 @@ const BookStallModal = ({ open, setOpen }) => {
   const [selectedPrice, setSelectedPrice] = useState(null);
   const [selectedStallNumber, setSelectedStallNumber] = useState(null);
   const [selectedButton, setSelectedButton] = useState("viewAll");
+  const colors = useMemo(() => ["#BE514B", "#64A2AC", "#D8E4BC"], []);
+  const [currentColor, setCurrentColor] = useState(null); // Initially choose a random color
+
+  useEffect(() => {
+    // Update currentColor only if selectedButton is "viewAll"
+    if (selectedButton === "viewAll") {
+      setCurrentColor(colors[Math.floor(Math.random() * colors.length)]);
+    }
+  }, [selectedButton, colors]);
 
   const handleColorSelection = (color, price, slotNum) => {
     setSelectedColor(color);
@@ -38,7 +49,7 @@ const BookStallModal = ({ open, setOpen }) => {
     <div className=" text-black shadow-xl ">
       {open && (
         <div
-          className="fixed top-[10%]  left-[50%] -translate-x-1/2 overflow-y-auto
+          className="fixed top-[1%]  left-[50%] -translate-x-1/2 overflow-y-auto
         h-[90%] rounded-md bg-white shadow-xl px-5 border md:mt-10 md:py-6  "
         >
           <div className=" mt-4 flex items-center justify-between  md:px-[7.9rem]  ">
@@ -61,7 +72,9 @@ const BookStallModal = ({ open, setOpen }) => {
                   ? "bg-[#F8669E] hover:bg-[#C83F74] text-white"
                   : "border border-[#F8669E] bg-transparent text-[#F8669E] hover:text-[#F8669E] hover:bg-transparent"
               }`}
-              onClick={() => handleClick("viewAll")}
+              onClick={() => {
+                handleClick("viewAll");
+              }}
             >
               View All
             </Button>
@@ -103,15 +116,11 @@ const BookStallModal = ({ open, setOpen }) => {
             <div className="lg:w-9/12 lg:m-auto sm:w-full mb-2 px-0 text-center tbls">
               <table className="text-sm table-auto" border="1" width={100}>
                 {/* First table */}
-                <tr>
+            <tr>
                   <SlotCell
                     color={
-                      selectedButton === "premiumStall"
-                        ? "bg-[#BE514B]"
-                        : selectedButton === "basicStall1"
-                        ? "bg-gray-400"
-                        : selectedButton === "basicStall2"
-                        ?"bg-gray-400"
+                      selectedButton === "viewAll"
+                        ? `bg-[${currentColor}]`
                         : "bg-gray-400"
                     }
                     stallType="premium"
@@ -212,7 +221,9 @@ const BookStallModal = ({ open, setOpen }) => {
                       handleColorSelection("bg-[#BE514B]", "$30", 105)
                     }
                   />
-                </tr>
+                </tr> 
+              
+               
                 {/* Second row */}
                 <tr>
                   <SlotCell color="bg-[#BE514B]" border="false" />
