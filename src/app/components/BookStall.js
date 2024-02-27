@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import BookStallModalCopy from "./BookStallModalcopy";
 
 const BookStall = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <section className=" bg-[rgb(243,243,243)] py-5 ">
