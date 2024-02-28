@@ -4,37 +4,84 @@
 
 export const stallInfo = [
   {
-    id:1,
-    color:"bg-[#BE514B]",
-    stallType:"Premium",
-    stallSQFt:"3 X 2 Meter (Font 3m/10ft)",
-    stallPrice:"35,000 INR"
-
+    id: 1,
+    color: "bg-[#BE514B]",
+    stallType: "Premium",
+    stallSQFt: "3 X 2 Meter (Font 3m/10ft)",
+    stallPrice: "35,000 INR",
   },
   {
-    id:2,
-    color:"bg-[#64A2AC]",
-    stallType:"Basic Stall 1",
-    stallSQFt:"3 X 2 Meter (Font 3m/10ft)",
-    stallPrice:"35,000 INR"
-
+    id: 2,
+    color: "bg-[#64A2AC]",
+    stallType: "Basic Stall 1",
+    stallSQFt: "3 X 2 Meter (Font 3m/10ft)",
+    stallPrice: "35,000 INR",
   },
   {
-    id:1,
-    color:"bg-[#D8E4BC]",
-    stallType:"Basic Stall 2",
-    stallSQFt:"3 X 2 Meter (Font 3m/10ft)",
-    stallPrice:"35,000 INR"
-
+    id: 1,
+    color: "bg-[#D8E4BC]",
+    stallType: "Basic Stall 2",
+    stallSQFt: "3 X 2 Meter (Font 3m/10ft)",
+    stallPrice: "35,000 INR",
   },
-]
+];
 
-
-
-
-
-
-
+export const products = [
+  {
+    id: 1,
+    imgUrl: "/clothImage.jpg",
+    clotheName: "clothe name",
+    price: "500 RS",
+  },
+  {
+    id: 2,
+    imgUrl: "/clothImage.jpg",
+    clotheName: "clothe name",
+    price: "500 RS",
+  },
+  {
+    id: 3,
+    imgUrl: "/clothImage.jpg",
+    clotheName: "clothe name",
+    price: "500 RS",
+  },
+  {
+    id: 4,
+    imgUrl: "/clothImage.jpg",
+    clotheName: "clothe name",
+    price: "500 RS",
+  },
+  {
+    id: 5,
+    imgUrl: "/clothImage.jpg",
+    clotheName: "clothe name",
+    price: "500 RS",
+  },
+  {
+    id: 6,
+    imgUrl: "/clothImage.jpg",
+    clotheName: "clothe name",
+    price: "500 RS",
+  },
+  {
+    id: 7,
+    imgUrl: "/clothImage.jpg",
+    clotheName: "clothe name",
+    price: "500 RS",
+  },
+  {
+    id: 8,
+    imgUrl: "/clothImage.jpg",
+    clotheName: "clothe name",
+    price: "500 RS",
+  },
+  {
+    id: 9,
+    imgUrl: "/clothImage.jpg",
+    clotheName: "clothe name",
+    price: "500 RS",
+  },
+];
 
 export const stallValue = {
   firstRow: [
@@ -42,46 +89,44 @@ export const stallValue = {
       id: 1,
       color: "bg-[#64A2AC]",
       slotNum: 94,
-      price:"35,000Rs",
-      
+      price: "35,000Rs",
     },
 
     {
       id: 2,
       color: "bg-[#BE514B]",
       slotNum: 95,
-      price:"25,000Rs",
-     
+      price: "25,000Rs",
     },
     {
       id: 3,
       color: "bg-[#D8E4BC]",
       slotNum: 96,
-      price:"35,000Rs"
+      price: "35,000Rs",
     },
     {
       id: 4,
       color: "bg-[#BE514B]",
       slotNum: 97,
-      price:"55,000Rs"
+      price: "55,000Rs",
     },
     {
       id: 5,
       color: "bg-[#64A2AC]",
       slotNum: 98,
-      price:"55,000Rs"
+      price: "55,000Rs",
     },
     {
       id: 6,
       color: "bg-[#64A2AC]",
       slotNum: 99,
-      price:"55,000Rs"
+      price: "55,000Rs",
     },
     {
       id: 7,
       color: "bg-[#BE514B]",
       slotNum: 100,
-      price:"55,000Rs"
+      price: "55,000Rs",
     },
     {
       id: 8,
@@ -92,44 +137,44 @@ export const stallValue = {
       id: 9,
       color: "bg-[#64A2AC]",
       slotNum: 100,
-      price:"55,000Rs"
+      price: "55,000Rs",
     },
     {
       id: 10,
       color: "bg-[#BE514B]",
       slotNum: 101,
-      price:"55,000Rs"
+      price: "55,000Rs",
     },
     {
       id: 11,
       color: "bg-[#64A2AC]",
       slotNum: 102,
-      price:"55,000Rs"
+      price: "55,000Rs",
     },
     {
       id: 12,
       color: "bg-[#64A2AC]",
       slotNum: 103,
-      price:"55,000Rs"
+      price: "55,000Rs",
     },
     {
       id: 13,
       color: "bg-[#64A2AC]",
       slotNum: 104,
-      price:"55,000Rs"
+      price: "55,000Rs",
     },
     {
       id: 14,
       color: "bg-[#64A2AC]",
       slotNum: 105,
-      price:"55,000Rs"
+      price: "55,000Rs",
     },
     {
       id: 15,
       color: "bg-[#64A2AC]",
       slotNum: 105,
       colSpan: 1,
-      price:"55,000Rs"
+      price: "55,000Rs",
     },
   ],
   secondRow: [
@@ -181,7 +226,7 @@ export const stallValue = {
     {
       id: 15,
       color: "bg-[#64A2AC]",
-      // 
+      //
     },
   ],
   thirdRow: [
@@ -316,7 +361,7 @@ export const stallValue = {
       id: 1,
       color: "bg-[#BE514B]",
       slotNum: 92,
-      rowSpan:2
+      rowSpan: 2,
     },
 
     {
@@ -384,7 +429,7 @@ export const stallValue = {
       id: 15,
       color: "bg-[#64A2AC]",
       slotNum: 106,
-      rowSpan:2
+      rowSpan: 2,
     },
   ],
   sixthRow: [
@@ -392,7 +437,7 @@ export const stallValue = {
       id: 1,
       color: "bg-[#BE514B]",
       // slotNum: 92,
-      rowSpan:2
+      rowSpan: 2,
     },
 
     {
@@ -422,7 +467,6 @@ export const stallValue = {
     {
       id: 7,
       // color: "bg-[#64A2AC]",
-      
     },
     {
       id: 8,
@@ -457,14 +501,11 @@ export const stallValue = {
     },
     {
       id: 14,
-      
     },
     {
       id: 15,
       // color: "bg-[#64A2AC]",
       // slotNum: 106,
-    
-      
     },
   ],
 
@@ -473,7 +514,7 @@ export const stallValue = {
       id: 1,
       color: "bg-[#BE514B]",
       slotNum: 92,
-      rowSpan:2
+      rowSpan: 2,
     },
 
     {
@@ -536,14 +577,11 @@ export const stallValue = {
     },
     {
       id: 14,
-      
     },
     {
       id: 15,
       color: "bg-[#64A2AC]",
       slotNum: 106,
-    
-      
     },
   ],
   ninthRow: [
@@ -551,7 +589,7 @@ export const stallValue = {
       id: 1,
       color: "bg-[#BE514B]",
       slotNum: 92,
-      rowSpan:2
+      rowSpan: 2,
     },
 
     {
@@ -614,14 +652,11 @@ export const stallValue = {
     },
     {
       id: 14,
-      
     },
     {
       id: 15,
       color: "bg-[#64A2AC]",
       slotNum: 106,
-    
-      
     },
   ],
   tenthRow: [
@@ -629,7 +664,7 @@ export const stallValue = {
       id: 1,
       color: "bg-[#BE514B]",
       slotNum: 92,
-      rowSpan:2
+      rowSpan: 2,
     },
 
     {
@@ -659,7 +694,6 @@ export const stallValue = {
     {
       id: 7,
       // color: "bg-[#64A2AC]",
-      
     },
     {
       id: 8,
@@ -694,14 +728,11 @@ export const stallValue = {
     },
     {
       id: 14,
-      
     },
     {
       id: 15,
       color: "bg-[#64A2AC]",
       slotNum: 106,
-    
-      
     },
   ],
   eleventhRow: [
@@ -709,7 +740,7 @@ export const stallValue = {
       id: 1,
       color: "bg-[#BE514B]",
       slotNum: 92,
-      rowSpan:2
+      rowSpan: 2,
     },
 
     {
@@ -772,14 +803,11 @@ export const stallValue = {
     },
     {
       id: 14,
-      
     },
     {
       id: 15,
       color: "bg-[#64A2AC]",
       slotNum: 106,
-    
-      
     },
   ],
   twelvethRow: [
@@ -787,7 +815,7 @@ export const stallValue = {
       id: 1,
       color: "bg-[#BE514B]",
       slotNum: 92,
-      rowSpan:2
+      rowSpan: 2,
     },
 
     {
@@ -850,17 +878,14 @@ export const stallValue = {
     },
     {
       id: 14,
-      
     },
     {
       id: 15,
       color: "bg-[#64A2AC]",
       slotNum: 106,
-    
-      
     },
   ],
- 
+
   thirtnthRow: [
     {
       id: 1,
@@ -871,7 +896,7 @@ export const stallValue = {
     {
       id: 2,
       color: "bg-[#BE514B]",
-      slotNum:1, 
+      slotNum: 1,
     },
     {
       id: 3,
@@ -940,5 +965,4 @@ export const stallValue = {
       colSpan: 1,
     },
   ],
-  
 };

@@ -36,8 +36,12 @@ const SlotCell = ({
     <td
       colSpan={colSpan}
       className={` ${cellColor}  ${
-        cellColor === "bg-red-600" ? "cursor-not-allowed" : "cursor-pointer"
-      }  px-4 py-2  `}
+        selectedButton === "premiumStall" ||
+        selectedButton === "basicStall2" ||
+        selectedButton === "basicStall1"
+          ? "cursor-not-allowed"
+          : "cursor-pointer"
+      } px-2 py-1  md:px-4 md:py-2`}
       onClick={onClick}
       rowSpan={rowSpan}
     >
@@ -70,9 +74,9 @@ const BookStallTable = ({
   };
 
   return (
-    <div className="w-[400px] md:w-auto overflow-auto md:overflow-hidden ml-12 md:ml-0">
+    <div className="w-[400px] md:w-auto overflow-auto md:overflow-hidden ml-12 md:ml-0 ">
       {" "}
-      <div className=" mt-10 md:mt-4 flex items-center justify-between  md:px-[8.4rem] pl-4  ">
+      <div className=" mt-10 md:mt-4 flex items-center justify-between  md:px-[8.4rem] pl-4   ">
         <h1 className="capitalize text-[#333369] text-[1.1rem] md:text-[1.7rem] font-semibold ">
           Select a stall to proceed with the booking
         </h1>
@@ -84,7 +88,7 @@ const BookStallTable = ({
         </button>
       </div>
       {/* Button to show the view all premium and basic stalls */}
-      <div className="md:mt-6 flex items-center gap-3 md:px-[8.4rem] pl-4  mt-10">
+      <div className="md:mt-6 flex items-center gap-3 md:px-[8.4rem] pl-4   mt-10">
         <Button
           className={`px-4 p-2.5 ${
             selectedButton === "viewAll"
