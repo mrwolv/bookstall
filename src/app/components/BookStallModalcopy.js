@@ -320,7 +320,7 @@ const BookStallModalCopy = ({ open, setOpen }) => {
             <div className="flex items-center gap-3">
               <span className="bg-[#64A2AC] h-8 w-8 rounded-lg -mt-10"></span>
               <p className="flex flex-col items-start justify-center text-[#707070]">
-                <span className="font-semibold">Basic Stall 2</span>
+                <span className="font-semibold">Basic Stall 1</span>
                 <span>3 X 2 Meter (Font 3m/10ft)</span>
                 <span className="font-semibold">35,000INR</span>
               </p>
@@ -328,7 +328,8 @@ const BookStallModalCopy = ({ open, setOpen }) => {
             <div className="flex items-center gap-3">
               <span className="bg-[#D8E4BC] h-8 w-8 rounded-lg -mt-10"></span>
               <p className="flex flex-col items-start justify-center text-[#707070]">
-                <span className="font-semibold">Premium Stall</span>
+                <span className="font-semibold">Basic Stall 
+                2</span>
                 <span>3 X 2 Meter (Font 3m/10ft)</span>
                 <span className="font-semibold">35,000INR</span>
               </p>
