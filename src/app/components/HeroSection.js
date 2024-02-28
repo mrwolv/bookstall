@@ -19,6 +19,7 @@ const HeroSection = () => {
           width={450}
           height={400}
           className="rounded-md md:h-[527px] md:w-[748px] "
+          placeholder = 'empty'
         />
         <div className="mt-4 md:mt-0 flex flex-col md:px-20  ">
           <div className="flex flex-col gap-4 md:gap-3 md:px-4">

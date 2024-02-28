@@ -2,20 +2,56 @@
 // bg-[#BE514B]
 // bg-[#D8E4BC]
 
+export const stallInfo = [
+  {
+    id:1,
+    color:"bg-[#BE514B]",
+    stallType:"Premium",
+    stallSQFt:"3 X 2 Meter (Font 3m/10ft)",
+    stallPrice:"35,000 INR"
+
+  },
+  {
+    id:2,
+    color:"bg-[#64A2AC]",
+    stallType:"Basic Stall 1",
+    stallSQFt:"3 X 2 Meter (Font 3m/10ft)",
+    stallPrice:"35,000 INR"
+
+  },
+  {
+    id:1,
+    color:"bg-[#D8E4BC]",
+    stallType:"Basic Stall 2",
+    stallSQFt:"3 X 2 Meter (Font 3m/10ft)",
+    stallPrice:"35,000 INR"
+
+  },
+]
+
+
+
+
+
+
+
+
 export const stallValue = {
   firstRow: [
     {
       id: 1,
       color: "bg-[#64A2AC]",
       slotNum: 94,
-      price:"35,000Rs"
+      price:"35,000Rs",
+      
     },
 
     {
       id: 2,
       color: "bg-[#BE514B]",
       slotNum: 95,
-      price:"25,000Rs"
+      price:"25,000Rs",
+     
     },
     {
       id: 3,
