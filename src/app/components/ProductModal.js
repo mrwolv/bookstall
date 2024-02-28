@@ -23,7 +23,7 @@ const ProductModal = ({
           Skip
         </button>
       </div>
-      <div className=" grid md:grid-cols-3 grid-col-1 md:px-10 md:py-12 ">
+      <div className=" grid md:grid-cols-3 grid-col-1 md:px-10 md:py-12 py-5 ">
         {products.map((product) => (
           <div
             className="flex items-center justify-between gap-4 border border-[#707070] border-opacity-40 px-5
