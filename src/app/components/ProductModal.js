@@ -20,38 +20,42 @@ const ProductModal = ({
 }) => {
   const [quantities, setQuantities] = useState({});
   const [addProduct, setAddProduct] = useState(0);
+  
   const [totalPrice, setTotalPrice] = useState(selectedPrice);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   // const handleAddProduct = () => {
   //   setAddProduct(addProduct + 1);
-   
+
   // };
 
   // const handleSubProduct = () => {
   //   addProduct > 1 ? setAddProduct(addProduct - 1) : setAddProduct(0);
-   
-  // }; 
+
+  // };
 
   // const handleSumProduct = (price) => {
   //   const totalProductPrice = addProduct * price + totalPrice;
   //   setTotalPrice(totalProductPrice);
   // };
 
-
   const handleAddProduct = (productId) => {
+    debugger;
+    console.log(quantities)
     setQuantities((prevQuantities) => ({
-      ...prevQuantities,
       [productId]: (prevQuantities[productId] || 0) + 1,
     }));
+    console.log(quantities)
   };
 
   const handleSubProduct = (productId) => {
-    if (quantities[productId] > 1) {
+    debugger;
+    if (quantities[productId] >= 1) {
+      console.log(quantities);
       setQuantities((prevQuantities) => ({
-        ...prevQuantities,
         [productId]: prevQuantities[productId] - 1,
       }));
+      console.log(quantities);
     } else {
       // Remove the product from the quantities object if the quantity is 1
       const { [productId]: removedProduct, ...rest } = prevQuantities;
@@ -64,12 +68,11 @@ const ProductModal = ({
   };
 
   const handleSumProduct = (price, productId) => {
- 
-
+    debugger
     let totalProductPrice = selectedPrice;
 
     // Calculate the total price including the price of the selected product
-    totalProductPrice = selectedPrice + quantities[productId] * price;
+    totalProductPrice = totalPrice + quantities[productId] * price;
 
     setSelectedPrice(totalProductPrice);
   };
@@ -144,9 +147,7 @@ const ProductModal = ({
                   -{" "}
                 </span>
                 <span className="">
-                  {quantities[selectedProduct?.id] || 0}{" "}
-
-                  {/* {addProduct} */}
+                  {quantities[selectedProduct?.id] || 0} {/* {addProduct} */}
                 </span>
                 <span
                   className="px-4 py-1 border border-gray-300 rounded-md hover:cursor-pointer "
@@ -163,9 +164,10 @@ const ProductModal = ({
                   type="button"
                   className="bg-[#F8669E] hover:bg-[#C83F74] mt-2 px-8 py-3"
                   onClick={() =>
-                    handleSumProduct(selectedProduct && selectedProduct?.price,
-                      selectedProduct &&  selectedProduct?.id
-                      )
+                    handleSumProduct(
+                      selectedProduct && selectedProduct?.price,
+                      selectedProduct && selectedProduct?.id
+                    )
                   }
                 >
                   Add cart
