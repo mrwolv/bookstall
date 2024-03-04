@@ -25,26 +25,31 @@ const BookStallModalCopy = ({ open, setOpen }) => {
           {productModalOpen ? (
             <>
               <ProductModal
-                setSelectedStallNumber={setSelectedStallNumber}
-                setSelectedTypeStall={setSelectedTypeStall}
-                setSelectedPrice={setSelectedPrice}
+                selectedTypeStall={selectedTypeStall}
                 setProductModalOpen={setProductModalOpen}
+                selectedPrice={selectedPrice}
+                setSelectedPrice={setSelectedPrice}
               />
             </>
           ) : (
             <BookStallTable
               setOpen={setOpen}
+              selectedPrice={selectedPrice}
+              selectedStallNumber={selectedStallNumber}
               setSelectedStallNumber={setSelectedStallNumber}
+              selectedTypeStall={selectedTypeStall}
               setSelectedTypeStall={setSelectedTypeStall}
               setSelectedPrice={setSelectedPrice}
+              productModalOpen={productModalOpen}
+              setProductModalOpen={setProductModalOpen}
             />
           )}
-          <BookStallFooter
+          {/* <BookStallFooter
             selectedStallNumber={selectedStallNumber}
             selectedTypeStall={selectedTypeStall}
             setProductModalOpen={setProductModalOpen}
             productModalOpen={productModalOpen}
-          />
+          /> */}
         </section>
       )}
     </div>

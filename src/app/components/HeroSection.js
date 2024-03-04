@@ -15,6 +15,7 @@ const HeroSection = () => {
       <div className="px-5 flex flex-col md:flex-row md:items-center  md:gap-10 ">
         <Image
           src="/headerImage.jpg"
+          priority
           alt="fare Image"
           width={450}
           height={400}

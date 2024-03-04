@@ -24,6 +24,7 @@ const BookStall = () => {
           <div className="flex flex-col gap-3 justify-center">
             <Image
               src="/headerImage.jpg"
+              priority
               alt="stall image"
               height={412}
               width={412}
@@ -48,6 +49,7 @@ const BookStall = () => {
           <div className="flex flex-col gap-3 justify-center">
             <Image
               src="/headerImage.jpg"
+              priority
               alt="stall image"
               height={412}
               width={412}
@@ -72,6 +74,7 @@ const BookStall = () => {
           <div className="flex flex-col gap-3 justify-center">
             <Image
               src="/headerImage.jpg"
+              priority
               alt="stall image"
               height={412}
               width={412}

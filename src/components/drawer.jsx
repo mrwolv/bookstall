@@ -20,9 +20,9 @@ const DrawerComponent = ({ open, setOpen }) => {
     <>
       <Drawer>
         <DrawerTrigger>
-          <div classNameName="bg-[#64A2AD] px-2 py-2.5 mb-2.5">
+          <div className="bg-[#64A2AD] px-2 py-2.5 mb-2.5">
             <GiHamburgerMenu
-              classNameName="text-white "
+              className="text-white "
               size={27}
               onClick={() => setOpen(!open)}
             />

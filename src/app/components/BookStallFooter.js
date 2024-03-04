@@ -5,7 +5,12 @@ const BookStallFooter = ({
   selectedStallNumber,
   setProductModalOpen,
   productModalOpen,
+  selectedPrice,
+  totalPrice
 }) => {
+
+
+
   return (
     <footer className="md:mt-20 mt-10 bg-[#333369] md:h-36 h-auto w-full px-20 md:px-0 mb-10  ">
       <div className="md:px-32 md:py-10 flex  flex-col gap-5 md:flex-row  md:items-center md:justify-between">
@@ -23,16 +28,25 @@ const BookStallFooter = ({
             <span className="text-[1.1rem] font-semibold capitalize">
               total Amount
             </span>
-            <span className="text-[1rem]">Price</span>
+            <span className="text-[1rem]">Price - {selectedPrice}</span>
           </p>
         </div>
         <div>
-          <Button
-            className="bg-[#F8669E] hover:bg-[#F8669E] rounded "
-            onClick={() => setProductModalOpen(!productModalOpen)}
-          >
-            Book Now
-          </Button>
+          {productModalOpen  ? (
+            <Button
+              className="bg-[#F8669E] hover:bg-[#F8669E] rounded "
+              onClick={() => console.log("can be use for payments")}
+            >
+            Pay now
+            </Button>
+          ) : (
+            <Button
+              className="bg-[#F8669E] hover:bg-[#F8669E] rounded "
+              onClick={() => setProductModalOpen(!productModalOpen)}
+            >
+              Book Now
+            </Button>
+          )}
         </div>
       </div>
     </footer>

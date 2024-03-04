@@ -18,7 +18,7 @@ export const stallInfo = [
     stallPrice: "35,000 INR",
   },
   {
-    id: 1,
+    id: 3,
     color: "bg-[#D8E4BC]",
     stallType: "Basic Stall 2",
     stallSQFt: "3 X 2 Meter (Font 3m/10ft)",
@@ -30,56 +30,56 @@ export const products = [
   {
     id: 1,
     imgUrl: "/clothImage.jpg",
-    clotheName: "clothe name",
-    price: "500 RS",
+    clotheName: "Jacket",
+    price: 500 
   },
   {
     id: 2,
     imgUrl: "/clothImage.jpg",
-    clotheName: "clothe name",
-    price: "500 RS",
+    clotheName: "Pants",
+    price: 700,
   },
   {
     id: 3,
     imgUrl: "/clothImage.jpg",
-    clotheName: "clothe name",
-    price: "500 RS",
+    clotheName: "Hoodie",
+    price: 500,
   },
   {
     id: 4,
     imgUrl: "/clothImage.jpg",
     clotheName: "clothe name",
-    price: "500 RS",
+    price: 500,
   },
   {
     id: 5,
     imgUrl: "/clothImage.jpg",
     clotheName: "clothe name",
-    price: "500 RS",
+    price: 500,
   },
   {
     id: 6,
     imgUrl: "/clothImage.jpg",
     clotheName: "clothe name",
-    price: "500 RS",
+    price: 500,
   },
   {
     id: 7,
     imgUrl: "/clothImage.jpg",
     clotheName: "clothe name",
-    price: "500 RS",
+    price: 500,
   },
   {
     id: 8,
     imgUrl: "/clothImage.jpg",
     clotheName: "clothe name",
-    price: "500 RS",
+    price: 500,
   },
   {
     id: 9,
     imgUrl: "/clothImage.jpg",
     clotheName: "clothe name",
-    price: "500 RS",
+    price: 500,
   },
 ];
 
@@ -89,7 +89,7 @@ export const stallValue = {
       id: 1,
       color: "bg-[#64A2AC]",
       slotNum: 94,
-      price: "35,000Rs",
+      price: 45000,
     },
 
     {
