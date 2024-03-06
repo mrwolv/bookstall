@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import BookStallFooter from "./BookStallFooter";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { products } from "../consants/stall";
+import { products } from "../../constants/stall";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DialogClose } from "@radix-ui/react-dialog";
 import MakingPaymentButton from "./MakingPaymentButton";

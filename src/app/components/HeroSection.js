@@ -11,7 +11,7 @@ const HeroSection = () => {
   const [open,setOpen] = useState(false) 
 
   return (
-    <section className="md:m-10 md:mx-12 mt-5">
+    <section className="md:m-10 md:mx-12 mt-5 container  ">
       <div className="px-5 flex flex-col md:flex-row md:items-center  md:gap-10 ">
         <Image
           src="/headerImage.jpg"
@@ -49,8 +49,8 @@ const HeroSection = () => {
             </div>
           </div>
           <div className=" mt-8 md:px-5 flex items-center gap-5 ">
-            <Button className="bg-[#F8669E] hover:bg-[#C83F74]" onClick={()=>console.log("Working")}>
-              Explore Stalls
+            <Button className="bg-[#F8669E] hover:bg-[#C83F74] transition-all ease-in-out scroll-smooth" >
+             <a href="#stalls">Explore Stalls</a>
             </Button>
             <Button
               variant="outline"

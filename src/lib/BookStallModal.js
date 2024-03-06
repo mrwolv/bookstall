@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { stallValue } from "@/app/constant/stall";
 
-import BookStallBuy from "../app/components/BookStallBuy";
+import BookStallBuy from "../app/components/BookStall/BookStallBuy";
 import { Button } from "@/components/ui/button";
 
 // component for table data to get data color and other props

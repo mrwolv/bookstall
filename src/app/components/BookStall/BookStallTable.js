@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { stallInfo, stallValue } from "../consants/stall";
+import { stallInfo, stallValue } from "../../constants/stall";
 import BookStallFooter from "./BookStallFooter";
 
 const SlotCell = ({

@@ -9,7 +9,7 @@ const BookStall = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className=" bg-[rgb(243,243,243)] py-5 ">
+    <section className=" bg-[rgb(243,243,243)] py-5  transition-all ease-in-out scroll-smooth" id="stalls">
       <div className="px-5 mt-4 md:px-16 ">
         <div className="flex flex-col items-start gap-2 ">
           <h1 className="mt-4 capitalize text-[#333369] text-[1.8rem] md:text-[2.1rem] font-bold">

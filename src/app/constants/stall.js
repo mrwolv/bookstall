@@ -2,6 +2,39 @@
 // bg-[#BE514B]
 // bg-[#D8E4BC]
 
+export const faq = [
+  {
+    id: 1,
+    question: "   Is it accessible?",
+    answer: "     Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: 2,
+    question: "   Is it accessible?",
+    answer: "     Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: 3,
+    question: "   Is it accessible?",
+    answer: "     Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: 4,
+    question: "   Is it accessible?",
+    answer: "     Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: 5,
+    question: "   Is it accessible?",
+    answer: "Yes. It adheres to the WAI-ARIA design pattern. ",
+  },
+  {
+    id: 6,
+    question: "   Is it accessible?",
+    answer: "     Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+];
+
 export const stallInfo = [
   {
     id: 1,
@@ -31,7 +64,7 @@ export const products = [
     id: 1,
     imgUrl: "/clothImage.jpg",
     clotheName: "Jacket",
-    price: 500 
+    price: 500,
   },
   {
     id: 2,

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Gallery = () => {
   return (
-    <section className="md:mt-10">
+    <section className="mt-10 container">
       <div className="flex flex-col items-center gap-2 ">
         <h1 className="mt-4 capitalize text-[#333369] text-[1.8rem] md:text-[2.1rem] font-bold">
           Checkout our gallery
@@ -13,93 +13,81 @@ const Gallery = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-rows-3 gap-4 md:mt-8 md:px-10">
-        <div className="grid gap-3">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg object-cover"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-              alt=""
-              height={300}
-              width={300}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-              alt=""
-              height={500}
-              width={400}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-              alt=""
-              height={200}
-              width={400}
-            />
-          </div>
+      <div className="grid  md:grid-cols-3 gap-3 mt-5 ">
+        <div className="grid gap-5 ">
+          <Image
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+            alt="clothe image"
+            height={500}
+            width={500}
+            className="h-auto w-full object-contain rounded-md shadow-sm"
+          />
+
+          <Image
+            src="/headerImage.jpg"
+            alt="clothe image"
+            height={500}
+            width={500}
+            className="h-auto w-full object-contain rounded-md shadow-sm"
+          />
+
+          <Image
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+            alt="clothe image"
+            height={500}
+            width={500}
+            className="h-auto w-full object-contain rounded-md shadow-sm"
+          />
         </div>
-        <div className="grid gap-3">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-              alt=""
-              height={300}
-              width={300}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-              alt=""
-              height={500}
-              width={400}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-              alt=""
-              height={200}
-              width={400}
-            />
-          </div>
+        <div className="grid gap-5 ">
+          <Image
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+            alt="clothe image"
+            height={500}
+            width={500}
+            className="h-auto w-full object-contain rounded-md shadow-sm"
+          />
+
+          <Image
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+            alt="clothe image"
+            height={500}
+            width={500}
+            className="h-auto w-full object-contain rounded-md shadow-sm"
+          />
+
+          <Image
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+            alt="clothe image"
+            height={500}
+            width={500}
+            className="h-auto w-full object-contain rounded-md shadow-sm"
+          />
         </div>
-        <div className="grid gap-3">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-              alt=""
-              height={300}
-              width={300}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-              alt=""
-              height={500}
-              width={400}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-              alt=""
-              height={200}
-              width={400}
-            />
-          </div>
+        <div className="grid gap-5 ">
+          <Image
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+            alt="clothe image"
+            height={500}
+            width={500}
+            className="h-auto w-full object-contain rounded-md shadow-sm"
+          />
+
+          <Image
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+            alt="clothe image"
+            height={500}
+            width={500}
+            className="h-auto w-full object-contain rounded-md shadow-sm"
+          />
+
+          <Image
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg"
+            alt="clothe image"
+            height={500}
+            width={500}
+            className="h-auto w-full object-contain rounded-md shadow-sm"
+          />
         </div>
       </div>
     </section>
@@ -107,3 +95,7 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+// export async function getStaticProps(){
+// const reponse = await fetch("")
+// }

@@ -6,7 +6,7 @@ import { LuSofa } from "react-icons/lu";
 
 const Provided = () => {
   return (
-    <section className=" mt-8 px-5 md:mx-20 ">
+    <section className=" mt-8 px-10 md:mx-20 container ">
       <div className=" flex flex-col md:flex-row gap-5 md:items-center md:justify-between">
         <div className="md:flex md:flex-col md:items-start md:justify-between md:gap-4 md:px-[6rem] ">
           <h1 className="text-[#333369] text-[1.8rem] md:text-[2.1rem] font-bold">
