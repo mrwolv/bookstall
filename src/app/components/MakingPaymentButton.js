@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import Script from "next/script";
 
-const MakingPaymentButton = ({ selectedPrice }) => {
+const MakingPaymentButton = ({ selectedPrice,selectedStallNumber }) => {
   const makePayment = async () => {
     const res = await initializeRazorpay();
 
@@ -18,14 +18,16 @@ const MakingPaymentButton = ({ selectedPrice }) => {
       },
       body: JSON.stringify({
         taxAmt: selectedPrice,
+        stallNumber:selectedStallNumber
       }),
     }).then((t) => t.json());
     console.log(data);
     var options = {
-      key: "rzp_test_VHGEfHdwzXYNLI", // Enter the Key ID generated from the Dashboard
+      key:  process.env.RAZORPAY_KEY, // Enter the Key ID generated from the Dashboard
       name: "Thor Solution PVT ltd",
       currency: data.currency,
-      amount: data.amount,
+      stallNumber:data.stallNumber,
+      amount: data.taxAmt,
       order_id: data.id,
       description: "Thankyou for your test donation",
       image: "https://manuarora.in/logo.png",
@@ -36,8 +38,8 @@ const MakingPaymentButton = ({ selectedPrice }) => {
         alert(response.razorpay_signature);
       },
       prefill: {
-        name: "Manu Arora",
-        email: "manuarorawork@gmail.com",
+        name: "Thor Solutions",
+        email: "thorsolutions@gmail.com",
         contact: "9999999999",
       },
     };
@@ -65,10 +67,10 @@ const MakingPaymentButton = ({ selectedPrice }) => {
   };
   return (
     <>
-      <Script
+      {/* <Script
         id="razorpay-checkout-js"
         src="https://checkout.razorpay.com/v1/checkout.js"
-      />
+      /> */}
       <Button
         className="bg-[#F8669E] hover:bg-[#F8669E] rounded "
         onClick={makePayment}

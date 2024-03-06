@@ -195,7 +195,7 @@ const ProductModal = ({
             </p>
           </div>
           <div>
-            <MakingPaymentButton selectedPrice={selectedPrice} />
+            <MakingPaymentButton selectedPrice={selectedPrice} selectedStallNumber={selectedStallNumber} />
           </div>
         </div>
       </footer>
