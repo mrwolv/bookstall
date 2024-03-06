@@ -2,6 +2,39 @@
 // bg-[#BE514B]
 // bg-[#D8E4BC]
 
+export const partner = [
+  {
+    id: 1,
+    title: "Listing partmer",
+    imgUrl: "/logo.jpg",
+  },
+  {
+    id: 2,
+    title: "Listing partmer",
+    imgUrl: "/logo.jpg",
+  },
+  {
+    id: 3,
+    title: "Listing partmer",
+    imgUrl: "/logo.jpg",
+  },
+  {
+    id: 4,
+    title: "Listing partmer",
+    imgUrl: "/logo.jpg",
+  },
+  {
+    id: 5,
+    title: "Listing partmer",
+    imgUrl: "/logo.jpg",
+  },
+  {
+    id: 6,
+    title: "Listing partmer",
+    imgUrl: "/logo.jpg",
+  },
+];
+
 export const faq = [
   {
     id: 1,

@@ -6,6 +6,8 @@ import Provided from "./components/Provided";
 import Gallery from "./components/Gallery";
 
 import Faq from "./components/Faq";
+import Partner from "./components/Partner";
+import ConnectComponent from "./components/ConnectComponent";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <Provided />
       <Gallery />
       <Faq />
+      <Partner />
+      <ConnectComponent />
     </main>
   );
 }
