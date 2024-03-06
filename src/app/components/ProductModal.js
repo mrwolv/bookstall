@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { products } from "../consants/stall";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DialogClose } from "@radix-ui/react-dialog";
+import MakingPaymentButton from "./MakingPaymentButton";
 
 const ProductModal = ({
   setProductModalOpen,
@@ -20,7 +21,7 @@ const ProductModal = ({
 }) => {
   const [quantities, setQuantities] = useState({});
   const [addProduct, setAddProduct] = useState(0);
-  
+
   const [totalPrice, setTotalPrice] = useState(selectedPrice);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -40,16 +41,14 @@ const ProductModal = ({
   // };
 
   const handleAddProduct = (productId) => {
-    debugger;
-    console.log(quantities)
+    console.log(quantities);
     setQuantities((prevQuantities) => ({
       [productId]: (prevQuantities[productId] || 0) + 1,
     }));
-    console.log(quantities)
+    console.log(quantities);
   };
 
   const handleSubProduct = (productId) => {
-    debugger;
     if (quantities[productId] >= 1) {
       console.log(quantities);
       setQuantities((prevQuantities) => ({
@@ -68,7 +67,6 @@ const ProductModal = ({
   };
 
   const handleSumProduct = (price, productId) => {
-    debugger
     let totalProductPrice = selectedPrice;
 
     // Calculate the total price including the price of the selected product
@@ -177,13 +175,30 @@ const ProductModal = ({
           </div>
         </DialogContent>
       </Dialog>
-      <BookStallFooter
-        productModalOpen={productModalOpen}
-        selectedStallNumber={selectedStallNumber}
-        selectedTypeStall={selectedTypeStall}
-        selectedPrice={selectedPrice}
-        // totalPrice={totalPrice}
-      />
+      <footer className="md:mt-20 mt-10 bg-[#333369] md:h-36 h-auto w-full px-20 md:px-0 mb-10  ">
+        <div className="md:px-32 md:py-10 flex  flex-col gap-5 md:flex-row  md:items-center md:justify-between">
+          <div className="flex flex-col gap-10 md:flex-row  md:items-center md:justify-between md:gap-16">
+            <p className="text-white flex flex-col justify-between gap-2">
+              <span className="text-[1.1rem] font-semibold">
+                {selectedTypeStall} - {selectedStallNumber}
+              </span>
+              <span className="text-[1rem]">3 X 2 Meter (Font 3m/10ft)</span>
+              <span>Item Selected in cart</span>
+            </p>
+            <div className="md:h-12 md:w-[1px] w-56 h-[1px]   bg-white"></div>
+
+            <p className="text-white flex flex-col justify-between gap-2">
+              <span className="text-[1.1rem] font-semibold capitalize">
+                total Amount
+              </span>
+              <span className="text-[1rem]">Price - {selectedPrice}</span>
+            </p>
+          </div>
+          <div>
+            <MakingPaymentButton selectedPrice={selectedPrice} />
+          </div>
+        </div>
+      </footer>
     </>
   );
 };

@@ -6,9 +6,8 @@ const BookStallFooter = ({
   setProductModalOpen,
   productModalOpen,
   selectedPrice,
-  totalPrice
+  totalPrice,
 }) => {
-
 
 
   return (
@@ -32,21 +31,12 @@ const BookStallFooter = ({
           </p>
         </div>
         <div>
-          {productModalOpen  ? (
-            <Button
-              className="bg-[#F8669E] hover:bg-[#F8669E] rounded "
-              onClick={() => console.log("can be use for payments")}
-            >
-            Pay now
-            </Button>
-          ) : (
-            <Button
-              className="bg-[#F8669E] hover:bg-[#F8669E] rounded "
-              onClick={() => setProductModalOpen(!productModalOpen)}
-            >
-              Book Now
-            </Button>
-          )}
+          <Button
+            className="bg-[#F8669E] hover:bg-[#F8669E] rounded "
+            onClick={() => setProductModalOpen(!productModalOpen)}
+          >
+            Book Now
+          </Button>
         </div>
       </div>
     </footer>
