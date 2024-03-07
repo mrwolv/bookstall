@@ -8,6 +8,7 @@ import Gallery from "./components/Gallery";
 import Faq from "./components/Faq";
 import Partner from "./components/Partner";
 import ConnectComponent from "./components/ConnectComponent";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Faq />
       <Partner />
       <ConnectComponent />
+      <Footer/>
     </main>
   );
 }

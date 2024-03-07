@@ -39,7 +39,7 @@ export const faq = [
   {
     id: 1,
     question: "   Is it accessible?",
-    answer: "     Yes. It adheres to the WAI-ARIA design pattern.",
+    answer: "     Yes. It adheres to the WAI-ARIA design pattern.   Yes. It adheres to the WAI-ARIA design patternYes.  It adheres to the WAI-ARIA design pattern",
   },
   {
     id: 2,
