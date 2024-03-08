@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import {
   Accordion,
@@ -22,10 +22,10 @@ const Faq = () => {
           FAQs
         </h1>
 
-        <div className="mt-5 grid grid-cols-1 gap-3">
+        <div className="mt-5 grid auto-cols-auto md:grid-flow-col md:grid-cols-1 gap-3 md:px-0 auto-cols-auto">
           {/* Map through grouped FAQ items */}
           {groupedFaq.map((faqPair, index) => (
-            <div key={index} className="grid grid-cols-1 gap-4">
+            <div key={index} className="grid grid-cols-1 gap-4 ">
               {/* Map through each pair */}
               {faqPair.map((faqItem) => (
                 <Accordion

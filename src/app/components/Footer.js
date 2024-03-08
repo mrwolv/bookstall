@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <footer className="bg-[#e0f2fe]">
       <div className="flex flex-col py-10">
-        <hr className="bg-gray-200 h-[1.2px] w-full px-10" />
+        <hr className="bg-gray-300 h-[1.2px] w-[90%] ml-5 md:ml-14" />
         <div className="container flex flex-col md:flex-row items-center justify-between py-5">
-          <div className="flex items-center justify-between md:flex-col  gap-4">
-            <div className="flex flex-col gap-3 justify-center">
+          <div className="flex  items-center justify-center  md:justify-between flex-col  gap-4">
+            <div className="flex flex-col gap-3 justify-center items-center">
               <Image
                 src={"/logo.jpg"}
                 alt="logo"
@@ -18,8 +18,8 @@ const Footer = () => {
               />
               <span>info@womanlisted.com</span>
             </div>
-            <div className="flex items-center justify-between gap-2">
-              <div className="flex flex-col  gap-3 justify-center">
+            <div className="flex items-center justify-between md:gap-3 gap-2  px-4 md:px-0">
+              <div className="flex flex-col  gap-3 justify-center items-center">
                 <Image
                   src={"/logo.jpg"}
                   alt="logo"
@@ -29,7 +29,7 @@ const Footer = () => {
                 />
                 <span>info@womanlisted.com</span>
               </div>
-              <div className="flex flex-col gap-3 justify-center">
+              <div className="flex flex-col gap-3 justify-center items-center">
                 <Image
                   src={"/logo.jpg"}
                   alt="logo"
@@ -41,8 +41,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-between gap-32 text-[1.035rem]">
-            <ul className="flex flex-col gap-1 text-[#707070]">
+          <div className="mt-5 md:mt-0 flex items-center justify-between gap-32 text-[1.035rem]">
+            <ul className="flex flex-col  gap-1 text-[#707070] list-outside">
               <li className="hover:cursor-pointer hover:text-gray-600  ">
                 Home
               </li>
@@ -128,8 +128,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="bg-gray-200 h-[1.2px] w-full px-10" />
-        <div className="flex items-center justify-center mt-4 text-[1rem] text-[#707070]">
+        <hr className="bg-gray-300 h-[1.2px] w-[90%] ml-5  md:ml-14" />
+        <div className="flex flex-col gap-2 md:flex-row items-center justify-center mt-4 text-[1rem] text-[#707070]">
           <span>Copyright@Womenlisted.com</span>
           <span>All right to reserved</span>
         </div>
