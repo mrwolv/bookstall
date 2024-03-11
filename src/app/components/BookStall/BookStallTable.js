@@ -45,7 +45,9 @@ const SlotCell = ({
         selectedButton === "basicStall1"
           ? "cursor-not-allowed"
           : "cursor-pointer"
-      } px-2 py-1  md:px-4 text-black md:py-2 ${isSelected ? "bg-black  text-white" : ""}`}
+      } px-2 py-1  md:px-4 text-black md:py-2 ${isSelected ? "bg-black  text-white " : ""}
+      ${cellColor==="bg-white text-white" ? "hover:cursor-not-allowed":"hover:cursor-pointer"}
+      `}
       onClick={onClick}
       rowSpan={rowSpan}
     >
