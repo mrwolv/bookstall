@@ -155,26 +155,26 @@ export const stallValue = {
     {
       id: 1,
       color: "bg-[#BE514B]",
-      slotNum: 94,
+      slotNum: 104,
       price: 25000,
     },
 
     {
       id: 2,
       color: "bg-[#64A2AC]",
-      slotNum: 95,
+      slotNum: 103,
       price: 35000,
     },
     {
       id: 3,
       color: "bg-[#D8E4BC]",
-      slotNum: 96,
+      slotNum: 102,
       price: 30000,
     },
     {
       id: 4,
       color: "bg-[#BE514B]",
-      slotNum: 97,
+      slotNum: 101,
       price: 35000,
     },
     {
