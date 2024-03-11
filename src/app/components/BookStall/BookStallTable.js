@@ -191,7 +191,7 @@ const BookStallTable = ({
                         )
                       }
                       selectedButton={selectedButton}
-                      isSelected={selectedSlot === item.slotNum}
+                    
                     />
                   ))}
                 </tr>

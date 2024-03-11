@@ -277,7 +277,7 @@ export const stallValue = {
     },
     {
       id: 7,
-      color:"bg-white text-black",
+      // color:"bg-white",
       slotNum: "Phase3",
     },
     {
