@@ -17,7 +17,7 @@ const BookStallModalCopy = ({ open, setOpen }) => {
       {open && (
         <section
           className="  fixed top-[5%] px-10 md:px-0 md:top-[2%]  left-[50%] -translate-x-1/2 -translate-y-11/2 overflow-y-auto
-        h-[90%] md:h-[80%] rounded-md bg-white shadow-xl  border  md:w-[80%] 
+        h-[90%] md:h-[95%] rounded-md bg-white shadow-xl  border  md:w-[80%]  
         
         
         "

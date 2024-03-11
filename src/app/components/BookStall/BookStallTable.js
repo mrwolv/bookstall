@@ -19,20 +19,20 @@ const SlotCell = ({
 
   if (selectedButton === "premiumStall") {
     if (color !== "bg-[#BE514B]") {
-      cellColor = "bg-gray-300";
+      cellColor = "bg-gray-300 text-gray-300";
 
       // Set to gray if not premium color
     }
   } else if (selectedButton === "basicStall1") {
     if (color !== "bg-[#64A2AC]") {
-      cellColor = "bg-gray-300"; // Set to gray if not basicStall1 color
+      cellColor = "bg-gray-300 text-gray-300"; // Set to gray if not basicStall1 color
     }
   } else if (selectedButton === "basicStall2") {
     if (color !== "bg-[#D8E4BC]") {
-      cellColor = "bg-gray-300"; // Set to gray if not basicStall1 color
+      cellColor = "bg-gray-300 text-gray-300"; // Set to gray if not basicStall1 color
     }
   } else if (selectedButton !== "viewAll" && color !== selectedButton) {
-    cellColor = "bg-gray-300"; // Set to gray if not selected stall type
+    cellColor = "bg-gray-300 text-gray-300"; // Set to gray if not selected stall type
   }
 
   return (
@@ -45,7 +45,7 @@ const SlotCell = ({
         selectedButton === "basicStall1"
           ? "cursor-not-allowed"
           : "cursor-pointer"
-      } px-2 py-1  md:px-4 md:py-2 ${isSelected ? "bg-black  text-white" : ""}`}
+      } px-2 py-1  md:px-4 text-black md:py-2 ${isSelected ? "bg-black  text-white" : ""}`}
       onClick={onClick}
       rowSpan={rowSpan}
     >
@@ -211,6 +211,7 @@ const BookStallTable = ({
                       }
                       selectedButton={selectedButton}
                       selectedStallNumber={selectedStallNumber}
+                      isSelected={selectedSlot === item.slotNum}
                     />
                   ))}
                 </tr>
@@ -232,6 +233,7 @@ const BookStallTable = ({
                       }
                       selectedButton={selectedButton}
                       selectedStallNumber={selectedStallNumber}
+                      isSelected={selectedSlot === item.slotNum}
                     />
                   ))}
                 </tr>
@@ -253,6 +255,7 @@ const BookStallTable = ({
                       }
                       selectedButton={selectedButton}
                       selectedStallNumber={selectedStallNumber}
+                      isSelected={selectedSlot === item.slotNum}
                     />
                   ))}
                 </tr>
@@ -284,6 +287,7 @@ const BookStallTable = ({
                       }
                       selectedButton={selectedButton}
                       selectedStallNumber={selectedStallNumber}
+                      isSelected={selectedSlot === item.slotNum}
                     />
                   ))}
                 </tr>
@@ -304,6 +308,7 @@ const BookStallTable = ({
                       }
                       selectedButton={selectedButton}
                       selectedStallNumber={selectedStallNumber}
+                      isSelected={selectedSlot === item.slotNum}
                     />
                   ))}
                 </tr>
@@ -323,7 +328,8 @@ const BookStallTable = ({
                         )
                       }
                       selectedButton={selectedButton}
-                      selectedStallNumber={selectedStallNumber}
+                      // selectedStallNumber={selectedStallNumber}
+                      // isSelected={selectedSlot === item.slotNum}
                     />
                   ))}
                 </tr>
@@ -344,6 +350,7 @@ const BookStallTable = ({
                       }
                       selectedButton={selectedButton}
                       selectedStallNumber={selectedStallNumber}
+                      isSelected={selectedSlot === item.slotNum}
                     />
                   ))}
                 </tr>
@@ -363,7 +370,8 @@ const BookStallTable = ({
                         )
                       }
                       selectedButton={selectedButton}
-                      selectedStallNumber={selectedStallNumber}
+                      selectedStallNumber={selectedStallNumber}  
+                      isSelected={selectedSlot === item.slotNum}
                     />
                   ))}
                 </tr>
@@ -384,7 +392,8 @@ const BookStallTable = ({
                         )
                       }
                       selectedButton={selectedButton}
-                      selectedStallNumber={selectedStallNumber}
+                      selectedStallNumber={selectedStallNumber}  
+                      isSelected={selectedSlot === item.slotNum}
                     />
                   ))}
                 </tr>
