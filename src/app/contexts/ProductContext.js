@@ -68,13 +68,10 @@ export function ShoppingCartProvider({ children }) {
         selectedTypeStall,
         setSelectedTypeStall,
         handleAddToCart,
-        cartItems
+        cartItems,
       }}
     >
       {children}
-      {open && (
-        <MyDrawer/>
-      )}
     </ShoppingCartContext.Provider>
   );
 }
