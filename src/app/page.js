@@ -9,19 +9,22 @@ import Faq from "./components/Faq";
 import Partner from "./components/Partner";
 import ConnectComponent from "./components/ConnectComponent";
 import Footer from "./components/Footer";
+import { ShoppingCartProvider } from "./contexts/ProductContext";
 
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      <Navbar />
-      <HeroSection />
-      <BookStall />
-      <Provided />
-      <Gallery />
-      <Faq />
-      <Partner />
-      <ConnectComponent />
-      <Footer/>
+      <ShoppingCartProvider>
+        <Navbar />
+        <HeroSection />
+        <BookStall />
+        <Provided />
+        <Gallery />
+        <Faq />
+        <Partner />
+        <ConnectComponent />
+        <Footer />
+      </ShoppingCartProvider>
     </main>
   );
 }

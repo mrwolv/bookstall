@@ -1,14 +1,9 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-const BookStallFooter = ({
-  selectedTypeStall,
-  selectedStallNumber,
-  setProductModalOpen,
-  productModalOpen,
-  selectedPrice,
-  totalPrice,
-}) => {
+import { useShoppingCart } from "@/app/contexts/ProductContext";
+const BookStallFooter = ({onClick}) => {
 
+  const {selectedPrice,selectedStallNumber,selectedTypeStall} = useShoppingCart()
 
   return (
     <footer className="md:mt-20 mt-10 bg-[#333369] md:h-36 h-auto w-full px-20 md:px-0 mb-10  ">
@@ -28,14 +23,14 @@ const BookStallFooter = ({
               total Amount
             </span>
             <span className="text-[1rem]">Price - {selectedPrice}</span>
-          </p>
+          </p> 
         </div>
         <div>
           <Button
             className="bg-[#F8669E] hover:bg-[#F8669E] rounded "
-            onClick={() => setProductModalOpen(!productModalOpen)}
+            onClick={onClick}
           >
-            Book Now
+            Add to Cart
           </Button>
         </div>
       </div>

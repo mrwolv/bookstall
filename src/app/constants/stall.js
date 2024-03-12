@@ -93,62 +93,7 @@ export const stallInfo = [
   },
 ];
 
-export const products = [
-  {
-    id: 1,
-    imgUrl: "/clothImage.jpg",
-    clotheName: "Jacket",
-    price: 500,
-  },
-  {
-    id: 2,
-    imgUrl: "/clothImage.jpg",
-    clotheName: "Pants",
-    price: 700,
-  },
-  {
-    id: 3,
-    imgUrl: "/clothImage.jpg",
-    clotheName: "Hoodie",
-    price: 500,
-  },
-  {
-    id: 4,
-    imgUrl: "/clothImage.jpg",
-    clotheName: "clothe name",
-    price: 500,
-  },
-  {
-    id: 5,
-    imgUrl: "/clothImage.jpg",
-    clotheName: "clothe name",
-    price: 500,
-  },
-  {
-    id: 6,
-    imgUrl: "/clothImage.jpg",
-    clotheName: "clothe name",
-    price: 500,
-  },
-  {
-    id: 7,
-    imgUrl: "/clothImage.jpg",
-    clotheName: "clothe name",
-    price: 500,
-  },
-  {
-    id: 8,
-    imgUrl: "/clothImage.jpg",
-    clotheName: "clothe name",
-    price: 500,
-  },
-  {
-    id: 9,
-    imgUrl: "/clothImage.jpg",
-    clotheName: "clothe name",
-    price: 500,
-  },
-];
+ 
 
 export const stallValue = {
   firstRow: [
@@ -1026,6 +971,7 @@ export const stallValue = {
       id: 3,
       color: "bg-[#D8E4BC] ",
       slotNum: 24,
+      price:30000
     },
     {
       id: 4,

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { stallInfo, stallValue } from "../../constants/stall";
 import BookStallFooter from "./BookStallFooter";
+import { useShoppingCart } from "@/app/contexts/ProductContext";
 
 const SlotCell = ({
   slotNum,
@@ -45,8 +46,14 @@ const SlotCell = ({
         selectedButton === "basicStall1"
           ? "cursor-not-allowed"
           : "cursor-pointer"
-      } px-2 py-1  md:px-4 text-black md:py-2 ${isSelected ? "bg-black  text-white " : ""}
-      ${cellColor==="bg-white text-white" ? "hover:cursor-not-allowed":"hover:cursor-pointer"}
+      } px-2 py-1  md:px-4 text-black md:py-2 ${
+        isSelected ? "bg-black  text-white " : ""
+      }
+      ${
+        cellColor === "bg-white text-white"
+          ? "hover:cursor-not-allowed"
+          : "hover:cursor-pointer"
+      }
       `}
       onClick={onClick}
       rowSpan={rowSpan}
@@ -56,19 +63,19 @@ const SlotCell = ({
   );
 };
 
-const BookStallTable = ({
-  setSelectedPrice,
-  setSelectedTypeStall,
-  setSelectedStallNumber,
-  setOpen,
-  selectedPrice,
-  selectedStallNumber,
-  selectedTypeStall,
-  productModalOpen,
-  setProductModalOpen,
-}) => {
+const BookStallTable = () => {
+  const {
+    setSelectedStallNumber,
+    setSelectedPrice,
+    setProductModalOpen,
+    setSelectedTypeStall,
+    selectedStallNumber,
+    productModalOpen,
+  } = useShoppingCart();
+
   const [selectedButton, setSelectedButton] = useState("viewAll");
   const [selectedSlot, setSelectedSlot] = useState(null);
+
   const handleColorSelection = (slotNum, price, color) => {
     setSelectedStallNumber(slotNum);
     setSelectedSlot(slotNum);
@@ -84,6 +91,10 @@ const BookStallTable = ({
 
   const handleClick = (button) => {
     setSelectedButton(button);
+  };
+
+  const handleOpenClick = () => {
+    setProductModalOpen(!productModalOpen);
   };
 
   return (
@@ -191,7 +202,6 @@ const BookStallTable = ({
                         )
                       }
                       selectedButton={selectedButton}
-                    
                     />
                   ))}
                 </tr>
@@ -372,7 +382,7 @@ const BookStallTable = ({
                         )
                       }
                       selectedButton={selectedButton}
-                      selectedStallNumber={selectedStallNumber}  
+                      selectedStallNumber={selectedStallNumber}
                       isSelected={selectedSlot === item.slotNum}
                     />
                   ))}
@@ -394,7 +404,7 @@ const BookStallTable = ({
                         )
                       }
                       selectedButton={selectedButton}
-                      selectedStallNumber={selectedStallNumber}  
+                      selectedStallNumber={selectedStallNumber}
                       isSelected={selectedSlot === item.slotNum}
                     />
                   ))}
@@ -426,13 +436,7 @@ const BookStallTable = ({
           </div>
         </div>
       </div>
-      <BookStallFooter
-        selectedStallNumber={selectedStallNumber}
-        selectedTypeStall={selectedTypeStall}
-        selectedPrice={selectedPrice}
-        productModalOpen={productModalOpen}
-        setProductModalOpen={setProductModalOpen}
-      />
+      <BookStallFooter onClick={handleOpenClick} />
     </>
   );
 };

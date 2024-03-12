@@ -1,16 +1,14 @@
 import { useState } from "react";
 
 import BookStallTable from "./BookStallTable";
-import ProductModal from "./ProductModal";
+import ProductModal from "../Products/ProductModal";
 import BookStallFooter from "./BookStallFooter";
+import { useShoppingCart } from "@/app/contexts/ProductContext";
 
 // component for table data to get data color and other props
 
 const BookStallModalCopy = ({ open, setOpen }) => {
-  const [productModalOpen, setProductModalOpen] = useState(false);
-  const [selectedPrice, setSelectedPrice] = useState(null);
-  const [selectedStallNumber, setSelectedStallNumber] = useState(null);
-  const [selectedTypeStall, setSelectedTypeStall] = useState(null);
+  const { productModalOpen } = useShoppingCart();
 
   return (
     <div className=" text-black shadow-xl ">
@@ -24,25 +22,10 @@ const BookStallModalCopy = ({ open, setOpen }) => {
         >
           {productModalOpen ? (
             <>
-              <ProductModal
-                selectedTypeStall={selectedTypeStall}
-                setProductModalOpen={setProductModalOpen}
-                selectedPrice={selectedPrice}
-                setSelectedPrice={setSelectedPrice}
-              />
+              <ProductModal />
             </>
           ) : (
-            <BookStallTable
-              setOpen={setOpen}
-              selectedPrice={selectedPrice}
-              selectedStallNumber={selectedStallNumber}
-              setSelectedStallNumber={setSelectedStallNumber}
-              selectedTypeStall={selectedTypeStall}
-              setSelectedTypeStall={setSelectedTypeStall}
-              setSelectedPrice={setSelectedPrice}
-              productModalOpen={productModalOpen}
-              setProductModalOpen={setProductModalOpen}
-            />
+            <BookStallTable />
           )}
           {/* <BookStallFooter
             selectedStallNumber={selectedStallNumber}
