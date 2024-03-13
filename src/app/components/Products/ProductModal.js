@@ -65,8 +65,8 @@ const ProductModal = () => {
 
   return (
     <>
-      <section className="md:mt-5 mt-5 ">
-        <div className=" mt-4 flex items-center justify-between  md:px-[7.9rem] px-10  ">
+      <section className="md:mt-5 mt-5 container ">
+        <div className=" mt-4 flex items-center justify-between  md:px-[7.9rem] px-10 flex-wrap  ">
           <h1 className="capitalize text-[#333369] text-[1.1rem] md:text-[1.7rem] font-semibold">
             Add On Products for your Booth!
           </h1>
@@ -90,11 +90,11 @@ const ProductModal = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-col-2 grid-cols-2 md:grid-cols-3 md:px-10 md:py-12 py-5 ">
+        <div className=" container grid grid-col-2 grid-cols-2 md:grid-cols-3 md:px-10 md:py-12 py-5 ">
           {products &&
             products?.map((product) => (
               <div
-                className={`flex items-center justify-between gap-4 border border-[#707070] border-opacity-40 px-5 cursor-pointer md:px-5 md:py-5 rounded-xl  `}
+                className={`flex items-center  justify-between gap-4 border border-[#707070] border-opacity-40 px-5 cursor-pointer md:px-8 md:py-5 rounded-xl  `}
                 key={product.id}
                 onClick={() => handleProductClick(product)}
               >

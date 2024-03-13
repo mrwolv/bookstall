@@ -14,6 +14,7 @@ export function useShoppingCart() {
 
 export function ShoppingCartProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const [products, setProducts] = useState([]);
   const [productModalOpen, setProductModalOpen] = useState(false);
   const [selectedPrice, setSelectedPrice] = useState(null);
@@ -54,6 +55,10 @@ export function ShoppingCartProvider({ children }) {
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
+  const toggleModal = () =>{
+    setOpenModal(!openModal)
+  }
+ 
 
   return (
     <ShoppingCartContext.Provider
@@ -72,6 +77,9 @@ export function ShoppingCartProvider({ children }) {
         cartItems,
         isOpen,
         setIsOpen,
+        setOpenModal,
+        openModal,
+        toggleModal
       }}
     >
       {children}

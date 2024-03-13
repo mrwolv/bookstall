@@ -19,8 +19,8 @@ const Provided = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:mx-20 ">
-          <div className="flex items-center justify-between ">
+        <div className="grid grid-cols-2 md:mx-20  ">
+          <div className="flex items-center justify-between flex-wrap lg:flex-nowrap ">
             <div className="grid gap-2">
               <TbAirConditioning size={50} color="#F8669E" />
               <span className="text-[#707070] ">Air Conditiner</span>
@@ -30,7 +30,7 @@ const Provided = () => {
               <span className="text-[#707070]">Sitting</span>
             </div>
           </div>
-          <div className="flex items-center justify-between ">
+          <div className="flex items-center justify-between flex-wrap lg:flex-nowrap  ">
             <div className="grid gap-2">
               <LuParkingCircle size={50} color="#F8669E" />
               <span className="text-[#707070] ">Free Parking</span>

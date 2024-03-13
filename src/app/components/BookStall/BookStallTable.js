@@ -71,6 +71,8 @@ const BookStallTable = () => {
     setSelectedTypeStall,
     selectedStallNumber,
     productModalOpen,
+    setOpenModal,
+    openModal
   } = useShoppingCart();
 
   const [selectedButton, setSelectedButton] = useState("viewAll");
@@ -107,7 +109,7 @@ const BookStallTable = () => {
           </h1>
           <button
             className="text-[1rem] hover:underline"
-            onClick={() => setOpen(!open)}
+            onClick={()=> setOpenModal(!openModal)}
           >
             Back
           </button>
