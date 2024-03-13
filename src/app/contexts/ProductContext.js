@@ -3,7 +3,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import "react-modern-drawer/dist/index.css";
 import Drawer from "react-modern-drawer";
-import { MyDrawer } from "../components/Products/CartProducts";
+import "react-modern-drawer/dist/index.css";
+import CartProducts from "../components/Products/CartProducts";
 
 const ShoppingCartContext = createContext({});
 
@@ -69,9 +70,22 @@ export function ShoppingCartProvider({ children }) {
         setSelectedTypeStall,
         handleAddToCart,
         cartItems,
+        isOpen,
+        setIsOpen,
       }}
     >
       {children}
+      {isOpen && (
+        <Drawer
+          open={isOpen}
+          onClose={toggleDrawer}
+          direction="right"
+          // className="md:w-[500px]"
+          style={{ width: "500px",overflow:"scroll" }}
+        >
+          <CartProducts cartItems={cartItems} />
+        </Drawer>
+      )}
     </ShoppingCartContext.Provider>
   );
 }
