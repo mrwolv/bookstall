@@ -119,19 +119,19 @@ const ProductModal = () => {
                     // If yes, show Remove button
                     <Button
                       variant="outline"
-                      className="border-[#F8669E] focus:border-white bg-dark hover:bg-[#C83F74] text-white focus:text-white hover:text-white"
+                      className="border-[#F8669E]  bg-dark hover:bg-[#C83F74] text-[#F8669E]  hover:text-white focus:scale-95"
                       onClick={() => handleAddToCart(product)}
                     >
-                      <FaTrash color="#F8669E" />
+                      <FaTrash className="  " />
                     </Button>
                   ) : (
                     // If not, show Add button
                     <Button
                       variant="outline"
-                      className="border-[#F8669E] focus:border-white bg-white hover:bg-[#C83F74] text-[#F8669E] focus:text-white hover:text-white"
+                      className="border-[#F8669E]  bg-white hover:bg-[#C83F74] text-[#F8669E]  hover:text-white"
                       onClick={() => handleAddToCart(product)}
                     >
-                      <FaShoppingCart />
+                      <FaShoppingCart className=" " />
                     </Button>
                   )}
                 </div>
