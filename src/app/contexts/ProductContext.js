@@ -20,10 +20,14 @@ export function ShoppingCartProvider({ children }) {
   const [selectedPrice, setSelectedPrice] = useState(null);
   const [selectedStallNumber, setSelectedStallNumber] = useState(null);
   const [selectedTypeStall, setSelectedTypeStall] = useState(null);
+  const [quantities, setQuantities] = useState(1);
   //  State for adding cart items
   const [cartItems, setCartItems] = useState([]);
 
   /* Function to add cart and to remove as well */
+
+  console.log("this is cartitems", cartItems);
+
   const handleAddToCart = (product) => {
     // Check if the product is already in the cart
     if (cartItems.find((item) => item.id === product.id)) {
@@ -41,9 +45,9 @@ export function ShoppingCartProvider({ children }) {
   useEffect(() => {
     async function handleFetch() {
       try {
-        const res = await fetch("https://fakestoreapi.com/products");
+        const res = await fetch("https://fakestoreapi.com/products  ");
         const data = await res.json();
-
+        console.log(data);
         setProducts(data);
       } catch (error) {
         alert(error);
@@ -55,10 +59,46 @@ export function ShoppingCartProvider({ children }) {
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
-  const toggleModal = () =>{
-    setOpenModal(!openModal)
+  const toggleModal = () => {
+    setOpenModal(!openModal);
+  };
+
+  function handleAddProduct(id) {
+    setCartItems((prevCartItems) =>
+      prevCartItems.map((item) => {
+        if (item.id === id) {
+          const updatedQuantities =
+            typeof item.quantities === "number" ? item.quantities + 1 : 0;
+          return { ...item, quantities: updatedQuantities };
+        } else {
+          return item;
+        }
+      })
+    );
   }
- 
+  function handleSubProduct(id) {
+    setCartItems((prevCartItems) =>
+      prevCartItems.map((item) => {
+        if (item.id === id) {
+          const updatedQuantities =
+            typeof item.quantities === "number"
+              ? item.quantities <= 1
+                ? 0
+                : item.quantities - 1
+              : 0;
+          return { ...item, quantities: updatedQuantities };
+        } else {
+          return item;
+        }
+      })
+    );
+  }
+
+  function removeItem(id){
+setCartItems(currItem=>{
+  return currItem.filter(item=>item.id!==id)
+})
+  }
 
   return (
     <ShoppingCartContext.Provider
@@ -79,7 +119,11 @@ export function ShoppingCartProvider({ children }) {
         setIsOpen,
         setOpenModal,
         openModal,
-        toggleModal
+        toggleModal,
+        handleAddProduct,
+        quantities,
+        handleSubProduct,
+        removeItem
       }}
     >
       {children}
@@ -89,7 +133,7 @@ export function ShoppingCartProvider({ children }) {
           onClose={toggleDrawer}
           direction="right"
           // className="md:w-[500px]"
-          style={{ width: "500px",overflow:"scroll" }}
+          style={{ width: "500px", overflow: "scroll" }}
         >
           <CartProducts cartItems={cartItems} />
         </Drawer>

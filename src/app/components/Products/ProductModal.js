@@ -25,27 +25,7 @@ const ProductModal = () => {
   const [selectedProduct, setSelectedProduct] = useState();
   const [totalPrice, setTotalPrice] = useState(selectedPrice);
 
-  const handleAddProduct = (productId) => {
-    console.log(quantities);
-    setQuantities((prevQuantities) => ({
-      [productId]: (prevQuantities[productId] || 0) + 1,
-    }));
-    console.log(quantities);
-  };
 
-  const handleSubProduct = (productId) => {
-    if (quantities[productId] >= 1) {
-      console.log(quantities);
-      setQuantities((prevQuantities) => ({
-        [productId]: prevQuantities[productId] - 1,
-      }));
-      console.log(quantities);
-    } else {
-      // Remove the product from the quantities object if the quantity is 1
-      const { [productId]: removedProduct, ...rest } = prevQuantities;
-      setQuantities(rest);
-    }
-  };
 
   const handleProductClick = (product, id) => {
     if (selectedProductId !== id) {
@@ -108,7 +88,7 @@ const ProductModal = () => {
                 <p className="flex flex-col gap-1 ">
                   <span className="text-[#707070] text-[1.1rem] capitalize ">
                     {" "}
-                    {product.title.substr(0, 18)}
+                    {product.title}
                   </span>
                   <span className="text-[#707070] font-bold">
                     {product.price}{" "}

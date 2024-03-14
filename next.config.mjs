@@ -8,7 +8,7 @@ const nextConfig = {
 
   reactStrictMode: true,
   images: {
-    domains: ["flowbite.s3.amazonaws.com","img.icons8.com","fakestoreapi.com"],
+    domains: ["flowbite.s3.amazonaws.com","img.icons8.com","fakestoreapi.com","placeimg.com","i.imgur.com"],
   },
 };
 

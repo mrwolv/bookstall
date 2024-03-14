@@ -4,7 +4,9 @@ import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 
 const CartProducts = ({ cartItems }) => {
-  const { setIsOpen } = useShoppingCart();
+  const { setIsOpen, removeItem, handleAddProduct, handleSubProduct } =
+    useShoppingCart();
+
   return (
     <div className="overflow">
       <div className="md:px-4 md:py-5">
@@ -32,25 +34,34 @@ const CartProducts = ({ cartItems }) => {
             <div className="flex flex-col items-end justify-center gap-1 ">
               <div className="flex items-center justify-between gap-4">
                 <h1 className="font-mono text-[1.2rem] md:py-2 font-semibold text-start">
-                  {item.title.substr(0, 18)}
+                  {item.title}
                 </h1>
                 <span className="font-bold">{item.price}</span>
               </div>
               <div className=" md:py-2 h-10 w-36 rounded-2xl border  flex items-center justify-center gap-6 text-[1.1rem] select-none">
-                <span className="border-r pr-2 active:scale-95 hover:cursor-pointer ">
+                <span
+                  className="border-r pr-2 active:scale-75 hover:cursor-pointer "
+                  onClick={() => handleSubProduct(item.id)}
+                >
                   {" "}
                   -{" "}
                 </span>
 
-                <span className=""> 4 </span>
+                <span className=""> {item?.quantities} </span>
 
-                <span className="border-l pl-2 active:scale-95 hover:cursor-pointer">
+                <span
+                  className="border-l pl-2 active:scale-75 hover:cursor-pointer"
+                  onClick={() => handleAddProduct(item.id)}
+                >
                   {" "}
                   +{" "}
                 </span>
               </div>
               <div className="md:py-3  ">
-                <span className="text-sm  font-semibold hover:underline hover:cursor-pointer text-[#F8669E]">
+                <span
+                  className="text-sm  font-semibold hover:underline hover:cursor-pointer text-[#F8669E]"
+                  onClick={() => removeItem(item.id)}
+                >
                   Remove
                 </span>
               </div>
