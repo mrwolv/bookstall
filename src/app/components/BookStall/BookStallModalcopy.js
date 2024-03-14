@@ -1,7 +1,3 @@
-"use clien"
-
-import { useState } from "react";
-
 import BookStallTable from "./BookStallTable";
 import ProductModal from "../Products/ProductModal";
 
@@ -9,8 +5,9 @@ import { useShoppingCart } from "@/app/contexts/ProductContext";
 
 // component for table data to get data color and other props
 
+
 const BookStallModalCopy = () => {
-  const { productModalOpen,openModal } = useShoppingCart();
+  const { productModalOpen, openModal } = useShoppingCart();
 
   return (
     <div className=" text-black shadow-xl ">
