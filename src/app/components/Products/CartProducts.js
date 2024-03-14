@@ -15,6 +15,7 @@ const CartProducts = ({ cartItems }) => {
     selectedStallNumber,
     selectedTypeStall,
     selectedPrice,
+    calculateTotal,
   } = useShoppingCart();
 
   return (
@@ -82,12 +83,15 @@ const CartProducts = ({ cartItems }) => {
         <hr className="h-[1px] w-full" />
         <div className="flex flex-col justify-center gap-4">
           <div className="flex flex-col justify-between md:mr-6 gap-2">
-            <span className="text-textGrayColor text-[1rem] font-semibold">
+            <span className="text-black text-[1rem] font-semibold">
               {selectedTypeStall} - {selectedStallNumber}
             </span>
 
-            <span className="text-textGrayColor text-[1rem] font-semibold">
-              Stall Price Value : {selectedPrice}
+            <span className="text-black text-[1rem] font-semibold flex flex-col justify-center gap-2">
+              <span>Selected Stall Price : {selectedPrice}</span>
+              <span className="text-black ">
+                Total amount : &#8377;{calculateTotal()}
+              </span>
             </span>
           </div>
           <p className="flex items-center justify-between md:mr-6">

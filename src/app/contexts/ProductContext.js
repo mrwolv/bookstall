@@ -20,7 +20,8 @@ export function ShoppingCartProvider({ children }) {
   const [selectedPrice, setSelectedPrice] = useState(null);
   const [selectedStallNumber, setSelectedStallNumber] = useState(null);
   const [selectedTypeStall, setSelectedTypeStall] = useState(null);
-  const [quantities, setQuantities] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(selectedPrice);
+
   //  State for adding cart items
   const [cartItems, setCartItems] = useState([]);
 
@@ -94,11 +95,19 @@ export function ShoppingCartProvider({ children }) {
     );
   }
 
-  function removeItem(id){
-setCartItems(currItem=>{
-  return currItem.filter(item=>item.id!==id)
-})
+  function removeItem(id) {
+    setCartItems((currItem) => {
+      return currItem.filter((item) => item.id !== id);
+    });
   }
+
+  const calculateTotal = () => {
+    let total = selectedPrice;
+    cartItems.forEach((item) => {
+      total += item.price * item.quantities;
+    });
+    return total;
+  };
 
   return (
     <ShoppingCartContext.Provider
@@ -121,9 +130,10 @@ setCartItems(currItem=>{
         openModal,
         toggleModal,
         handleAddProduct,
-        quantities,
+
         handleSubProduct,
-        removeItem
+        removeItem,
+        calculateTotal,
       }}
     >
       {children}
@@ -134,6 +144,7 @@ setCartItems(currItem=>{
           direction="right"
           // className="md:w-[500px]"
           style={{ width: "500px", overflow: "scroll" }}
+          enableOverlay={false}
         >
           <CartProducts cartItems={cartItems} />
         </Drawer>

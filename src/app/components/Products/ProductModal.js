@@ -1,10 +1,7 @@
-"use client";
+import React from "react";
 
-import React, { useEffect, useState } from "react";
-import Drawer from "react-modern-drawer";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import "react-modern-drawer/dist/index.css";
 
 import { useShoppingCart } from "@/app/contexts/ProductContext";
 import BookStallFooter from "../BookStall/BookStallFooter";
@@ -15,33 +12,10 @@ const ProductModal = () => {
     toggleDrawer,
     products,
     setProductModalOpen,
-    selectedPrice,
-    setSelectedPrice,
+
     handleAddToCart,
     cartItems,
   } = useShoppingCart();
-  const [quantities, setQuantities] = useState({});
-  const [selectedProductId, setSelectedProductId] = useState(null);
-  const [selectedProduct, setSelectedProduct] = useState();
-  const [totalPrice, setTotalPrice] = useState(selectedPrice);
-
-
-
-  const handleProductClick = (product, id) => {
-    if (selectedProductId !== id) {
-      setSelectedProduct(product);
-      setSelectedProductId(product.id);
-    }
-  };
-
-  const handleSumProduct = (price, productId) => {
-    let totalProductPrice = selectedPrice;
-
-    // Calculate the total price including the price of the selected product
-    totalProductPrice = totalPrice + quantities[productId] * price;
-
-    setSelectedPrice(totalProductPrice);
-  };
 
   return (
     <>
@@ -88,7 +62,7 @@ const ProductModal = () => {
                 <p className="flex flex-col gap-1 ">
                   <span className="text-[#707070] text-[1.1rem] capitalize ">
                     {" "}
-                    {product.title.substr(0,18)}
+                    {product.title.substr(0, 18)}
                   </span>
                   <span className="text-[#707070] font-bold">
                     {product.price}{" "}

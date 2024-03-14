@@ -1,9 +1,16 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import Script from "next/script";
+import { useShoppingCart } from "@/app/contexts/ProductContext";
 
 const MakingPaymentButton = ({ selectedPrice, selectedStallNumber }) => {
+
+  const {calculateTotal} = useShoppingCart()
+
   const makePayment = async () => {
+
+    const totalAmount = calculateTotal(); 
+
     const res = await initializeRazorpay();
 
     if (!res) {
@@ -17,7 +24,7 @@ const MakingPaymentButton = ({ selectedPrice, selectedStallNumber }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        taxAmt: selectedPrice,
+        taxAmt: totalAmount,
         stallNumber: selectedStallNumber,
       }),
     }).then((t) => t.json());
