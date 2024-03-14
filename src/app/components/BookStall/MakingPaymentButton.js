@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import Script from "next/script";
 
-const MakingPaymentButton = ({ selectedPrice,selectedStallNumber }) => {
+const MakingPaymentButton = ({ selectedPrice, selectedStallNumber }) => {
   const makePayment = async () => {
     const res = await initializeRazorpay();
 
@@ -18,15 +18,15 @@ const MakingPaymentButton = ({ selectedPrice,selectedStallNumber }) => {
       },
       body: JSON.stringify({
         taxAmt: selectedPrice,
-        stallNumber:selectedStallNumber
+        stallNumber: selectedStallNumber,
       }),
     }).then((t) => t.json());
     console.log(data);
     var options = {
-      key:  process.env.RAZORPAY_KEY, // Enter the Key ID generated from the Dashboard
+      key: process.env.RAZORPAY_KEY, // Enter the Key ID generated from the Dashboard
       name: "Thor Solution PVT ltd",
       currency: data.currency,
-      stallNumber:data.stallNumber,
+      stallNumber: data.stallNumber,
       amount: data.taxAmt,
       order_id: data.id,
       description: "Thankyou for your test donation",
@@ -72,7 +72,7 @@ const MakingPaymentButton = ({ selectedPrice,selectedStallNumber }) => {
         src="https://checkout.razorpay.com/v1/checkout.js"
       /> */}
       <Button
-        className="bg-[#F8669E] hover:bg-[#F8669E] rounded "
+        className="bg-[#F8669E] hover:bg-[#F8669E] rounded active:scale-95 "
         onClick={makePayment}
       >
         Book Now

@@ -45,7 +45,7 @@ const ProductModal = () => {
 
   return (
     <>
-      <section className="md:mt-5 mt-5 container ">
+      <section className="md:mt-5 mt-5 container  ">
         <div className=" mt-4 flex items-center justify-between  md:px-[7.9rem] px-10 flex-wrap  ">
           <h1 className="capitalize text-[#333369] text-[1.1rem] md:text-[1.7rem] font-semibold">
             Add On Products for your Booth!
@@ -88,7 +88,7 @@ const ProductModal = () => {
                 <p className="flex flex-col gap-1 ">
                   <span className="text-[#707070] text-[1.1rem] capitalize ">
                     {" "}
-                    {product.title}
+                    {product.title.substr(0,18)}
                   </span>
                   <span className="text-[#707070] font-bold">
                     {product.price}{" "}
