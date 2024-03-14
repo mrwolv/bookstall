@@ -18,6 +18,8 @@ const CartProducts = ({ cartItems }) => {
     calculateTotal,
   } = useShoppingCart();
 
+  let totalPrice  = calculateTotal()
+
   return (
     <div className="overflow">
       <div className="md:px-4 md:py-5">
@@ -90,7 +92,7 @@ const CartProducts = ({ cartItems }) => {
             <span className="text-black text-[1rem] font-semibold flex flex-col justify-center gap-2">
               <span>Selected Stall Price : {selectedPrice}</span>
               <span className="text-black ">
-                Total amount : &#8377;{calculateTotal()}
+                Total amount : &#8377;{typeof totalPrice === "number" ? totalPrice : selectedPrice}
               </span>
             </span>
           </div>
