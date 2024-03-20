@@ -15,10 +15,11 @@ const CartProducts = ({ cartItems }) => {
     selectedStallNumber,
     selectedTypeStall,
     selectedPrice,
+
     calculateTotal,
   } = useShoppingCart();
 
-  let totalPrice  = calculateTotal()
+  let totalPrice = calculateTotal();
 
   return (
     <div className="overflow">
@@ -29,6 +30,7 @@ const CartProducts = ({ cartItems }) => {
           className="hover:cursor-pointer"
           onClick={() => setIsOpen(false)}
         />
+        {/* <span onClick={()=>setOpenModal(true)}>Add more Products</span> */}
       </div>
       <div className="md:px-3 md:ml-7 md:py-5">
         <hr className="bg-gray-300 h-[1px] w-[90%] " />
@@ -92,7 +94,8 @@ const CartProducts = ({ cartItems }) => {
             <span className="text-black text-[1rem] font-semibold flex flex-col justify-center gap-2">
               <span>Selected Stall Price : {selectedPrice}</span>
               <span className="text-black ">
-                Total amount : &#8377;{typeof totalPrice === "number" ? totalPrice : selectedPrice}
+                Total amount : &#8377;
+                {typeof totalPrice === "number" ? totalPrice : selectedPrice}
               </span>
             </span>
           </div>

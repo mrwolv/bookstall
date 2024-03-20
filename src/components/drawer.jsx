@@ -3,16 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { BiCategory } from "react-icons/bi";
 import { BsBriefcase } from "react-icons/bs";
 import { FaUserGraduate } from "react-icons/fa";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 
 const DrawerComponent = ({ open, setOpen }) => {
   console.log(open);

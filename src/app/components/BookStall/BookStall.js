@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import BookStallModalCopy from "./BookStallModalcopy";
 import { useShoppingCart } from "@/app/contexts/ProductContext";
@@ -39,9 +39,7 @@ const BookStall = () => {
             </h2>
             <p className="flex items-center gap-3 text-[1.1rem]">
               <span className="text-secondaryColor font-semibold">15,000</span>
-              <span className="textGrayColor ">
-                3X2 Meter (Front 3m/10ft){" "}
-              </span>
+              <span className="textGrayColor ">3X2 Meter (Front 3m/10ft) </span>
             </p>
             <Button
               className="bg-primaryColor hover:bg-primaryColor w-24"
@@ -64,9 +62,7 @@ const BookStall = () => {
             </h2>
             <p className="flex items-center gap-3 text-[1.1rem]">
               <span className="text-secondaryColor font-semibold">15,000</span>
-              <span className="textGrayColor ">
-                3X2 Meter (Front 3m/10ft){" "}
-              </span>
+              <span className="textGrayColor ">3X2 Meter (Front 3m/10ft) </span>
             </p>
             <Button
               className="bg-primaryColor hover:bg-primaryColor w-24"
@@ -89,9 +85,7 @@ const BookStall = () => {
             </h2>
             <p className="flex items-center gap-3 text-[1.1rem]">
               <span className="text-secondaryColor font-semibold">15,000</span>
-              <span className="textGrayColor ">
-                3X2 Meter (Front 3m/10ft){" "}
-              </span>
+              <span className="textGrayColor ">3X2 Meter (Front 3m/10ft) </span>
             </p>
             <Button
               className="bg-primaryColor hover:bg-primaryColor w-24"
@@ -102,7 +96,7 @@ const BookStall = () => {
           </div>
         </div>
       </div>
-      <BookStallModalCopy  />
+      <BookStallModalCopy />
     </section>
   );
 };

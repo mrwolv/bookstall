@@ -1,65 +1,27 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { stallInfo, stallValue } from "../../constants/stall";
 import BookStallFooter from "./BookStallFooter";
 import { useShoppingCart } from "@/app/contexts/ProductContext";
+import SlotCell from "../BookStall/SlotCell";
 
-const SlotCell = ({
-  slotNum,
-  color,
-  onClick,
+const TableViewButton = ({
+  selectedButtonType,
+  label,
   selectedButton,
-  colSpan,
-  rowSpan,
-  id,
-  isSelected,
+  handleClick,
 }) => {
-  let cellColor = color;
-
-  if (selectedButton === "premiumStall") {
-    if (color !== "bg-[#BE514B]") {
-      cellColor = "bg-gray-300 text-gray-300";
-
-      // Set to gray if not premium color
-    }
-  } else if (selectedButton === "basicStall1") {
-    if (color !== "bg-[#64A2AC]") {
-      cellColor = "bg-gray-300 text-gray-300"; // Set to gray if not basicStall1 color
-    }
-  } else if (selectedButton === "basicStall2") {
-    if (color !== "bg-[#D8E4BC]") {
-      cellColor = "bg-gray-300 text-gray-300"; // Set to gray if not basicStall1 color
-    }
-  } else if (selectedButton !== "viewAll" && color !== selectedButton) {
-    cellColor = "bg-gray-300 text-gray-300"; // Set to gray if not selected stall type
-  }
-
   return (
-    <td
-      colSpan={colSpan}
-      key={id}
-      className={` ${cellColor}  ${
-        selectedButton === "premiumStall" ||
-        selectedButton === "basicStall2" ||
-        selectedButton === "basicStall1"
-          ? "cursor-not-allowed"
-          : "cursor-pointer"
-      } px-2 py-1  md:px-4 text-black md:py-2 ${
-        isSelected ? "bg-black  text-white " : ""
-      }
-      ${
-        cellColor === "bg-white text-white"
-          ? "hover:cursor-not-allowed"
-          : "hover:cursor-pointer"
-      }
-      `}
-      onClick={onClick}
-      rowSpan={rowSpan}
+    <Button
+      className={`px-4 p-2.5 ${
+        selectedButton === selectedButtonType
+          ? "bg-[#F8669E] hover:bg-[#C83F74] text-white"
+          : "border border-[#F8669E] bg-transparent text-[#F8669E] hover:text-[#F8669E] hover:bg-transparent"
+      }`}
+      onClick={handleClick}
     >
-      <a href="#">{slotNum}</a>
-    </td>
+      {label}
+    </Button>
   );
 };
 
@@ -72,11 +34,12 @@ const BookStallTable = () => {
     selectedStallNumber,
     productModalOpen,
     setOpenModal,
-    openModal
+    openModal,
+    selectedButton,
+    setSelectedButton,
+    selectedSlot,
+    setSelectedSlot,
   } = useShoppingCart();
-
-  const [selectedButton, setSelectedButton] = useState("viewAll");
-  const [selectedSlot, setSelectedSlot] = useState(null);
 
   const handleColorSelection = (slotNum, price, color) => {
     setSelectedStallNumber(slotNum);
@@ -90,7 +53,6 @@ const BookStallTable = () => {
       setSelectedTypeStall("Basic Stall 2");
     }
   };
-
   const handleClick = (button) => {
     setSelectedButton(button);
   };
@@ -109,26 +71,38 @@ const BookStallTable = () => {
           </h1>
           <button
             className="text-[1rem] hover:underline"
-            onClick={()=> setOpenModal(!openModal)}
+            onClick={() => setOpenModal(!openModal)}
           >
             Back
           </button>
         </div>
         {/* Button to show the view all premium and basic stalls */}
-        <div className="md:mt-6 flex items-center gap-3 md:px-[8.4rem] pl-4   mt-10">
-          <Button
-            className={`px-4 p-2.5 ${
-              selectedButton === "viewAll"
-                ? "bg-[#F8669E] hover:bg-[#C83F74] text-white"
-                : "border border-[#F8669E] bg-transparent text-[#F8669E] hover:text-[#F8669E] hover:bg-transparent"
-            }`}
-            onClick={() => {
-              handleClick("viewAll");
-            }}
-          >
-            View All
-          </Button>
-          <Button
+        <div className="md:mt-6 flex items-center gap-3 md:px-[8.4rem] pl-4 mt-10">
+          <TableViewButton
+            selectedButtonType="viewAll"
+            label="View All"
+            selectedButton={selectedButton}
+            handleClick={() => handleClick("viewAll")}
+          />
+          <TableViewButton
+            selectedButtonType="premiumStall"
+            label="Premium"
+            selectedButton={selectedButton}
+            handleClick={() => handleClick("premiumStall")}
+          />
+          <TableViewButton
+            selectedButtonType="basicStall1"
+            label="Basic Stall 1"
+            selectedButton={selectedButton}
+            handleClick={() => handleClick("basicStall1")}
+          />
+          <TableViewButton
+            selectedButtonType="basicStall2"
+            label="Basic Stall 2"
+            selectedButton={selectedButton}
+            handleClick={() => handleClick("basicStall2")}
+          />
+          {/* <Button
             className={`px-4 p-2.5 ${
               selectedButton === "basicStall1"
                 ? "bg-[#F8669E] hover:bg-[#C83F74] text-white"
@@ -157,8 +131,10 @@ const BookStallTable = () => {
             onClick={() => handleClick("premiumStall")}
           >
             Premium Stall
-          </Button>
+          </Button> */}
         </div>
+
+        
         {/* Table Content */}
         <div className="p-4 md:py-10 mr-52 ">
           <div className="lg:w-9/12 lg:m-auto w-full mb-2 px-0 text-center tbls">

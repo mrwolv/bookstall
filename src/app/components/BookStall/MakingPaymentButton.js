@@ -5,7 +5,18 @@ import { useShoppingCart } from "@/app/contexts/ProductContext";
 
 const MakingPaymentButton = ({ selectedPrice, selectedStallNumber }) => {
 
-  const {calculateTotal} = useShoppingCart()
+  const {calculateTotal,addStall} = useShoppingCart()
+  const handleBookingAndPayment = async () => {
+    try {
+      // Add stall
+      await addStall();
+
+      // Make payment
+      await makePayment();
+    } catch (error) {
+      console.log("Error occurred:", error);
+    }
+  };
 
   const makePayment = async () => {
 
@@ -80,7 +91,7 @@ const MakingPaymentButton = ({ selectedPrice, selectedStallNumber }) => {
       /> */}
       <Button
         className="bg-[#F8669E] hover:bg-[#F8669E] rounded active:scale-95 "
-        onClick={makePayment}
+        onClick={handleBookingAndPayment}
       >
         Book Now
       </Button>

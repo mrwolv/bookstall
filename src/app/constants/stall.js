@@ -143,7 +143,7 @@ export const stallValue = {
     {
       id: 8,
       color: "bg-white text-white",
-      slotNum: 101,
+      slotNum: 98.5,
     },
     {
       id: 9,

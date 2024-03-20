@@ -1,10 +1,11 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useRef } from "react";
 import "react-modern-drawer/dist/index.css";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import CartProducts from "../components/Products/CartProducts";
+import { useRouter } from "next/navigation";
 
 const ShoppingCartContext = createContext({});
 
@@ -20,7 +21,11 @@ export function ShoppingCartProvider({ children }) {
   const [selectedPrice, setSelectedPrice] = useState(null);
   const [selectedStallNumber, setSelectedStallNumber] = useState(null);
   const [selectedTypeStall, setSelectedTypeStall] = useState(null);
-  const [totalPrice, setTotalPrice] = useState(selectedPrice);
+  const [selectedButton, setSelectedButton] = useState("viewAll");
+  const [selectedSlot, setSelectedSlot] = useState(null);
+  const [data, setData] = useState([]);
+  const drawerRef = useRef(null);
+  const router = useRouter();
 
   //  State for adding cart items
   const [cartItems, setCartItems] = useState([]);
@@ -46,7 +51,7 @@ export function ShoppingCartProvider({ children }) {
   useEffect(() => {
     async function handleFetch() {
       try {
-        const res = await fetch("https://fakestoreapi.com/products  ");
+        const res = await fetch("https://fakestoreapi.com/products");
         const data = await res.json();
         console.log(data);
         setProducts(data);
@@ -109,6 +114,31 @@ export function ShoppingCartProvider({ children }) {
     return total;
   };
 
+  async function addStall() {
+    try {
+      const res = await fetch("http://localhost:3000/api/bookingdata", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          selectedTypeStall,
+          selectedStallNumber,
+          cartItems,
+        }),
+      });
+      if (res.ok) {
+        router.push("/");
+      } else {
+        throw new Error("Failed to create database");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -130,10 +160,16 @@ export function ShoppingCartProvider({ children }) {
         openModal,
         toggleModal,
         handleAddProduct,
-
+        drawerRef,
         handleSubProduct,
         removeItem,
         calculateTotal,
+        addStall,
+        data,
+        selectedButton,
+        setSelectedButton,
+        selectedSlot,
+        setSelectedSlot,
       }}
     >
       {children}

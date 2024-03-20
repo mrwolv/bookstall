@@ -1,7 +1,7 @@
 import React from "react";
 
 const BookStallBuy = (props) => {
-  console.log(props);
+
 
   return (
     <div className="mt-10 px-32 shadow-xl ml-32 bg-[#FAFAF9] rounded-lg ">

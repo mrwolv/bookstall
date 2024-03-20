@@ -12,7 +12,6 @@ const ProductModal = () => {
     toggleDrawer,
     products,
     setProductModalOpen,
-
     handleAddToCart,
     cartItems,
   } = useShoppingCart();
@@ -50,7 +49,7 @@ const ProductModal = () => {
               <div
                 className={`flex items-center  justify-between gap-4 border border-[#707070] border-opacity-40 px-5 cursor-pointer md:px-8 md:py-5 rounded-xl  `}
                 key={product.id}
-                onClick={() => handleProductClick(product)}
+                // onClick={() => handleProductClick(product)}
               >
                 <Image
                   src={product.image}
