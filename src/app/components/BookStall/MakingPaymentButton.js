@@ -4,8 +4,7 @@ import Script from "next/script";
 import { useShoppingCart } from "@/app/contexts/ProductContext";
 
 const MakingPaymentButton = ({ selectedPrice, selectedStallNumber }) => {
-
-  const {calculateTotal,addStall} = useShoppingCart()
+  const { calculateTotal, addStall } = useShoppingCart();
   const handleBookingAndPayment = async () => {
     try {
       // Add stall
@@ -19,8 +18,7 @@ const MakingPaymentButton = ({ selectedPrice, selectedStallNumber }) => {
   };
 
   const makePayment = async () => {
-
-    const totalAmount = calculateTotal(); 
+    const totalAmount = calculateTotal();
 
     const res = await initializeRazorpay();
 
@@ -29,7 +27,7 @@ const MakingPaymentButton = ({ selectedPrice, selectedStallNumber }) => {
       return;
     }
 
-    const data = await fetch("/api/razorpay", {
+    const data = await fetch(`${process.env.API_URL}api/razorpay`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
