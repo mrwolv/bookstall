@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { debounce } from "lodash";
 
 const SlotCell = ({
   slotNum,
@@ -15,10 +14,14 @@ const SlotCell = ({
 }) => {
   const [isSold, setIsSold] = useState(false);
 
+//   const apiUrl = process.env.API_URL
+//   console.log(apiUrl);
+
   useEffect(() => {
-    const fetchData = debounce(async () => {
+    const fetchData = async () => {
+
       try {
-        const res = await fetch("http://localhost:3000/api/bookingdata");
+        const res = await fetch(`/api/bookingdata`);
         const data = await res.json();
         // Check if the slotNum exists in the fetched data
         const stallExists = data.result.some(
@@ -28,14 +31,11 @@ const SlotCell = ({
       } catch (error) {
         console.log(error);
       }
-    }, 500); // Adjust the debounce delay as needed
+    }; // Adjust the debounce delay as needed
 
     fetchData();
 
     // Clean up function to cancel pending fetch requests
-    return () => {
-      fetchData.cancel();
-    };
   }, [slotNum]);
 
   // Determine cell color based on selectedButton and isSold state
@@ -48,7 +48,9 @@ const SlotCell = ({
     <td
       colSpan={colSpan}
       key={id}
-      className={` ${isSold ? "bg-red-500 text-white hover:cursor-not-allowed" : cellColor} ${
+      className={` ${
+        isSold ? "bg-red-500 text-white hover:cursor-not-allowed" : cellColor
+      } ${
         selectedButton === "premiumStall" ||
         selectedButton === "basicStall2" ||
         selectedButton === "basicStall1"

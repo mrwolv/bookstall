@@ -116,7 +116,7 @@ export function ShoppingCartProvider({ children }) {
 
   async function addStall() {
     try {
-      const res = await fetch("http://localhost:3000/api/bookingdata", {
+      const res = await fetch("/api/bookingdata", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
