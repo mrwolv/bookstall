@@ -27,7 +27,7 @@ const MakingPaymentButton = ({ selectedPrice, selectedStallNumber }) => {
       return;
     }
 
-    const data = await fetch(`${process.env.API_URL}api/razorpay`, {
+    const data = await fetch(`/api/razorpay`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
